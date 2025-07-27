@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="images/logo-circle.png" type="image/webp" />
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="lib/intel-tel-input/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="lib/select2/css/select2.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="lib/swiperjs/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.css" />
+    <title>تسجيل جديد</title>
+</head>
+
+<body>
+
+
+
+    <!-- Start Preloader -->
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+    <!-- End Preloader -->
+
+
+
+    <!-- Start Header -->
+    <header class="header form-header">
+        <div class="container-fluid">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.png" alt="logo">
+                </a>
+                <img class="logo-circle" src="images/logo-circle.png" alt="">
+                <div class="control-section">
+                    <div class="lang">
+                        <div class="icon-text">
+                            <i class="fa-light fa-globe"></i>
+                            <span class="lang-type">العربية</span>
+                        </div>
+                        <div class="lang-details">
+                            <ul>
+                                <li><a href="register-en.html">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="register-text">
+                        مسجل بالفعل؟
+                    </span>
+                    <a href="login.html" class="general-anchor login-anchor">
+                        دخول
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+
+    <section class="form-page-sec register-sec">
+        <div class="container">
+            <div class="form-content">
+                <div class="form-title-text">
+                    <h3 class="form-title">
+                        تسجيل جديد
+                    </h3>
+                    <p class="form-text">
+                        قم بإدخال كود التفعيل المرسل إلى رقم جوالك
+                    </p>
+                </div>
+                <div class="wizard">
+                    <form class="register-form">
+                        <div class="wizard-header">
+                            <div class="steps">
+                                <div class="steps-progress">
+                                    <ul class="progressbar list-unstyled wizard-step">
+                                        <li class="active" id="activeStep-1">
+                                            <div class="num">1</div>
+                                            <span>البيانات الأساسية</span>
+                                        </li>
+                                        <li class="" id="activeStep-2">
+                                            <div class="num">2</div>
+                                            <span> التحقق </span>
+                                        </li>
+                                        <li class="" id="activeStep-3">
+                                            <div class="num">3</div>
+                                            <span> نجاح التسجيل</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard-body">
+                            <div class="step initial active" id="step_1">
+                                <div class="input-holder">
+                                    <label class="label">
+                                        الاسم بالكامل
+                                    </label>
+                                    <input class="input" type="text">
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        رقم الجوال
+                                    </label>
+                                    <input class="input" placeholder="5xxxxxxxx" type="tel">
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        البريد الإلكتروني
+                                    </label>
+                                    <input class="input" type="email">
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        الجنس
+                                    </label>
+                                    <div class="radio-wrapper gender-radio-wrapper">
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" checked name="gender">
+                                            <span class="checkmark"></span>
+                                            ذكر
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                            انثى
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        الدولة
+                                    </label>
+                                    <select class="myselect" name="" id="country-select">
+                                        <option value="" selected disabled>اختر من القائمة </option>
+                                        <option value="">مصر </option>
+                                        <option value=""> السعودية </option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        المنطقة
+                                    </label>
+                                    <select class="myselect" name="" id="region-select">
+                                        <option value="" selected disabled>اختر من القائمة </option>
+                                        <option value="">منطقة 1 </option>
+                                        <option value=""> منطقة 2 </option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        المدينة
+                                    </label>
+                                    <select class="myselect" name="" id="city-select">
+                                        <option value="" selected disabled>اختر من القائمة </option>
+                                        <option value="">مدينة 1 </option>
+                                        <option value=""> مدينة 2 </option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        مادة التدريس
+                                    </label>
+                                    <div class="radio-wrapper">
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" checked name="subject">
+                                            <span class="checkmark"></span>
+                                            التربية الإسلامية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            اللغة العربية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            الرياضيات
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            العلوم
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            التربية البدنية والصحية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            الحاسب الآلي
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            الدراسات الاجتماعية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            اللغة الإنجليزية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            المهارات الحياتية والأسرية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            الفنون والتربية الأسرية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            الكيمياء
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            الأحياء
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        المرحلة التعليمية
+                                    </label>
+                                    <div class="radio-wrapper">
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" checked name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            المرحلة الابتدائية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            المرحلة المتوسطة
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            المرحلة الثانوية
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            التعليم الجامعي
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            التعليم المهني
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            التعليم المستمر
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        كلمة المرور
+                                    </label>
+                                    <div class="pass-input-wrapper">
+                                        <i class="fa-regular fa-eye icon"></i>
+                                        <input class="input" type="password">
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        تأكيد كلمة المرور
+                                    </label>
+                                    <div class="pass-input-wrapper">
+                                        <i class="fa-regular fa-eye icon"></i>
+                                        <input class="input" type="password">
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label  checkbox-label">
+                                        <input class="checkbox-input" type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <div class="approval-text">
+                                            لقد قرأت وأوافق على
+                                            <a class="terms-anchor" href="terms.html">الشروط والأحكام</a>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="wizard-btn-cont">
+                                    <button type="button" class="general-btn  w-100 first-btn"
+                                        onclick="activeStep($(this), 2)">
+                                        متابعة
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step" id="step_2">
+                                <div class="verfiy-cont">
+                                    <div class="digit-group otp-form">
+                                        <input type="text" name="opt-field[]" class="otp-field" maxlength="1" />
+                                        <input type="text" disabled name="opt-field[]" class="otp-field"
+                                            maxlength="1" />
+                                        <input type="text" disabled name="opt-field[]" class="otp-field"
+                                            maxlength="1" />
+                                        <input type="text" disabled name="opt-field[]" class="otp-field"
+                                            maxlength="1" />
+                                        <input type="text" class="otp-value" hidden>
+                                    </div>
+                                    <div class="countDown-content">
+                                        <span class="counter-timer">
+                                            <span id="counter"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="wizard-btn-cont">
+                                    <button disabled type="button" class="general-btn  first-btn"
+                                        onclick="activeStep($(this), 3)">
+                                        تأكيد
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step" id="step_3">
+                                <div class="success-content">
+                                    <i class="fa-thin fa-circle-check success-icon"></i>
+                                    <h2 class="success-title">تم التسجيل بنجاح </h2>
+                                    <p class="success-text">
+                                        تم ارسال طلب التسجيل بنجاح وسيتم مراجعة بيانات الحساب من الإدارة واتخاذ الاجراء
+                                        المناسب واشعارك برسالة عبر البريد
+                                        الالكتروني المدخل
+                                    </p>
+                                    <a href="index.html" rel="nofollow" class="general-btn">
+                                       الرجوع للرئيسية
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-copyright">
+                    <p class="copyright-text">
+                        فصل الواقع الإفتراضي المستقبلي ٢٠٢٥ ©
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="lib/jquery/jquery-3.7.0.min.js"></script>
+    <script src="lib/swiperjs/js/swiper-bundle.min.js"></script>
+    <script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/intel-tel-input/js/intlTelInputWithUtils.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/form-wizard.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

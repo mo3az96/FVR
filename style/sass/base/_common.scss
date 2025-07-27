@@ -1,0 +1,267 @@
+// General components
+
+.general-anchor {
+  background-color: $main-color;
+  border-radius: 20px;
+  min-width: 97px;
+  height: 40px;
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57;
+  color: #ffffff;
+  gap: 7px;
+  transition: all ease-in-out 0.2s;
+  border: 2px solid transparent;
+  &::before {
+    content: "\f007";
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    transition: all ease-in-out 0.2s;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $main-color;
+    border-color: $main-color;
+    &::before {
+      color: $main-color;
+    }
+  }
+  @include max-768 {
+    height: 37px;
+    gap: 5px;
+  }
+}
+.main-title {
+  text-align: start;
+  font-size: 36px;
+  line-height: 1.33;
+  font-weight: 800;
+  color: #000000;
+  @include max-768 {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+.main-text {
+  text-align: start;
+  line-height: 1.8;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 0;
+  @include max-768 {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+  }
+}
+.anchors-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  @include max-992 {
+    margin-top: 30px;
+    justify-content: center;
+  }
+  a {
+    border-radius: 25px;
+    padding-inline: 20px;
+    min-width: 135px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    @include max-768 {
+      height: 45px;
+    }
+  }
+}
+
+.page-title {
+  text-align: right;
+  font-size: 24px;
+  line-height: 1.66;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: start;
+  @include max-768 {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+}
+
+// General Styles
+.general-padding {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  @include max-768 {
+    padding-block: 50px;
+  }
+}
+
+.linear-overlay {
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 906px;
+    height: 906px;
+    background-image: radial-gradient(
+      closest-side at 50% 50%,
+      #0363f6 0%,
+      #000000 100%
+    );
+    opacity: 0.3;
+    top: -50%;
+    inset-inline-end: -50%;
+    z-index: 1;
+  }
+}
+
+// Start Preloader
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.preloader {
+  width: 100%;
+  height: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
+  position: relative;
+  overflow: hidden;
+}
+
+.preloader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100%;
+  background-color: $main-color;
+  animation: preloaderAnimation 3s infinite linear;
+}
+
+@keyframes preloaderAnimation {
+  100% {
+    left: 100%;
+  }
+}
+
+// End Preloader
+
+// Start Breadcrumb
+
+.breadcrumb-sec {
+  padding: 30px 0;
+  // @include max-768 {
+  //   padding-top: 40px;
+  // }
+}
+
+.item-home::after {
+  content: " / ";
+  padding: 0 8px;
+  color: #9b9b9b;
+}
+.breadcrumb {
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
+  row-gap: 4px;
+}
+
+.bread-link {
+  transition: all linear 0.2s;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+ol.breadcrumb li a,
+ol.breadcrumb li span,
+ol.breadcrumb li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #9b9b9b;
+  transition: all 0.2s linear;
+  // text-transform: capitalize;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+// End Breadcrumb
+
+// Swiper
+
+.general-swiper-parent {
+  position: relative;
+  .swiper-pagination {
+    bottom: -40px;
+    @include max-768 {
+      bottom: -30px;
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+  }
+  .swiper-pagination-bullet {
+    opacity: 0.502;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    @include max-768 {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $main-color;
+    opacity: 1;
+  }
+}
+
+// End Swiper
+
+// Lazy load
+
+// .lazy-img {
+//   transition: all linear 0.2s;
+// }
+// .loading-img {
+//   overflow: hidden;
+//   img {
+//     opacity: 0 !important;
+//     filter: blur(40px);
+//   }
+// }
+
+// .loaded-img {
+//   img {
+//     opacity: 1;
+//     filter: blur(0);
+//   }
+// }

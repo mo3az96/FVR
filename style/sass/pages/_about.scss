@@ -1,0 +1,42 @@
+.about {
+  .general-anchor {
+    &::before {
+      display: none;
+    }
+  }
+  .main-title {
+    margin-bottom: 20px;
+    @include max-768 {
+      text-align: center;
+    }
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 720px;
+    @include max-768 {
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+  .readmore-anchor {
+    background-color: rgba(3, 100, 247, 0.1);
+    color: $main-color;
+    border: none;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+
+  .img {
+    max-width: 64px;
+    margin-bottom: 34px;
+    @include max-768 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+

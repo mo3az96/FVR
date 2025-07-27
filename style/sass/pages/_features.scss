@@ -1,0 +1,114 @@
+.features {
+  // background-color: #000000;
+}
+.features-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include max-992 {
+    grid-template-columns: 1fr;
+    .anchors-wrapper {
+      justify-content: flex-start;
+    }
+  }
+  @include max-768 {
+    .anchors-wrapper {
+      justify-content: center;
+    }
+  }
+  .img-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    @include max-1200 {
+      height: 100%;
+    }
+    @include max-768 {
+      height: 300px;
+    }
+  }
+  .main-title {
+    color: #ffffff;
+    margin-bottom: 50px;
+    @include max-768 {
+      margin-bottom: 30px;
+    }
+  }
+  .features-list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    li {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #ffffff;
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      @include max-768 {
+        line-height: 1.5;
+        font-size: 16px;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      i {
+        color: #0363f6;
+        font-size: 26px;
+        margin-top: 5px;
+        @include max-768 {
+          font-size: 20px;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+  .general-anchor {
+    &::before {
+      display: none;
+    }
+  }
+  .call-anchor {
+    border: none;
+  }
+  .call-anchor {
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    &:hover {
+      background-color: #0363f6;
+      color: #fff;
+    }
+  }
+  .joinus-anchor {
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+  .text-wrapper {
+    padding-inline-start: 64px;
+    padding-inline-end: 130px;
+    padding-bottom: 50px;
+
+    @include max-1300 {
+      padding-inline: 50px;
+      padding-top: 60px;
+    }
+
+    @include max-768 {
+      padding-inline: 20px;
+      padding-block: 50px;
+    }
+    > * {
+      position: relative;
+      z-index: 3;
+    }
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    &::after {
+      top: -50%;
+      inset-inline-end: -50%;
+    }
+  }
+}

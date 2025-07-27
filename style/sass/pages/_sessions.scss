@@ -1,0 +1,855 @@
+// .add-session-form {
+
+// }
+.file-input-holder {
+  .label {
+    .hint {
+      margin-inline-start: 4px;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.57;
+      color: #e24a56;
+    }
+  }
+  .add-file-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    transform: translateY(-50%);
+    z-index: 1;
+    inset-inline-end: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba($color: $main-color, $alpha: 0.1);
+    color: $main-color;
+    min-width: 108px;
+    height: 36px;
+    padding-inline: 20px;
+    box-shadow: 0px 4px 15px #37a59b1a;
+    border-radius: 24px;
+    transition: all ease-in-out 0.2s;
+    &:hover {
+      color: #fff;
+      background-color: $main-color;
+      i {
+        color: #fff;
+      }
+    }
+    i {
+      color: $main-color;
+      font-size: 14px;
+      transition: all linear 0.2s;
+    }
+  }
+  .input {
+    appearance: none;
+    color: transparent;
+    &::file-selector-button {
+      display: none;
+    }
+  }
+  .file-input-wrapper {
+    position: relative;
+    .file-name {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      inset-inline-start: 20px;
+      z-index: 1;
+      margin: 0;
+    }
+  }
+}
+.session-page {
+  padding-bottom: 115px;
+  @include max-768 {
+    padding-bottom: 60px;
+    overflow: hidden;
+  }
+  .container-fluid {
+    padding-inline: 30px;
+    max-width: 1400px;
+    @include max-768 {
+      padding-inline: 20px;
+    }
+  }
+}
+
+.backToSessions {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.57;
+  font-weight: 800;
+  color: #000000;
+}
+.session-upper {
+  padding-block: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include max-768 {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+    gap: 25px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .btns-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    @include max-768 {
+      margin-inline: auto;
+      justify-content: center;
+    }
+  }
+  .general-anchor {
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    &:hover {
+      color: #fff;
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+
+  .add-student-attendance-btn,
+  .add-eduContent-btn {
+    background: rgba(3, 99, 246, 0.1);
+    color: #0363f6;
+    &:hover {
+      background-color: $main-color;
+    }
+    &::before {
+      content: "\2b";
+      color: $main-color;
+    }
+  }
+  .add-points-btn {
+    background: rgba($color: #2d8e36, $alpha: 0.1);
+    color: #2d8e36;
+    &::before {
+      content: "\f005";
+      color: #2d8e36;
+    }
+    &:hover {
+      background-color: #2d8e36;
+    }
+  }
+  .deduct-points-btn {
+    background: rgba($color: #e13612, $alpha: 0.1);
+    color: #e13612;
+    &::before {
+      content: "\f740";
+      color: #e13612;
+    }
+    &:hover {
+      background-color: #e13612;
+    }
+  }
+  .general-btn {
+    min-width: 136px;
+    padding-inline: 20px;
+  }
+}
+
+// Session Side Menu
+
+.session-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 168px;
+  inset-inline-start: 0;
+  z-index: 100;
+  row-gap: 2px;
+  @include max-768 {
+    top: 200px;
+  }
+  .session-item-anchor {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 46px;
+    height: 45px;
+    @include min-768 {
+      &:hover,
+      &.active {
+        .session-item-text {
+          transform: translate(0, -50%);
+        }
+        .icon {
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+    @include max-768 {
+      &.active {
+        .icon {
+          background-color: $main-color;
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .icon {
+      background-color: #fff;
+      border-start-end-radius: 10px;
+      border-end-end-radius: 10px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        position: relative;
+        z-index: 3;
+        color: $main-color;
+        font-size: 24px;
+        transition: all ease-out 0.4s;
+      }
+      @include max-768 {
+        box-shadow: 0px 2px 10px #37a59b1a;
+      }
+    }
+    .session-item-text {
+      position: absolute;
+      top: 50%;
+      width: max-content;
+      transform: translate(105%, -50%);
+      z-index: 2;
+      transition: all ease-out 0.4s;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #fff;
+      padding-inline-start: 46px;
+      padding-inline-end: 15px;
+      height: 45px;
+      border-start-end-radius: 10px;
+      border-end-end-radius: 10px;
+      background-color: $main-color;
+      @include max-768 {
+        display: none;
+      }
+      i {
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.eduContent-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 14px;
+  @include max-1400 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include max-992 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include max-768 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .modal_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    .box {
+      max-width: 313px;
+      width: 100%;
+      aspect-ratio: 313 / 200;
+      // height: 200px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 48px;
+        color: #0363f6;
+      }
+    }
+    span {
+      font-size: 14px;
+      display: block;
+      text-align: right;
+      color: #000000;
+    }
+  }
+}
+
+.video-holder {
+  video {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    @include max-768 {
+      height: 250px;
+    }
+  }
+}
+.audio-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eduContent-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    border-radius: 10px;
+    @include max-768 {
+      height: 130px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.students-cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 18px;
+  row-gap: 47px;
+  @include max-992 {
+    justify-content: center;
+    row-gap: 30px;
+  }
+}
+.student-card-btn {
+  @include max-768 {
+    width: calc(50% - 10px);
+  }
+  .student-card-box {
+    height: 200px;
+    border: 3px solid transparent;
+    padding-inline-end: 15px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    transition: all linear 0.2s;
+    @include max-768 {
+      width: 100%;
+      gap: 7px;
+      height: auto;
+    }
+    .number {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0363f6;
+      @include max-768 {
+        font-size: 40px;
+      }
+    }
+    .img {
+      width: 120px;
+      @include max-768 {
+        width: 80px;
+      }
+    }
+  }
+  .student-name {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 13px;
+    text-align: center;
+  }
+}
+
+.student-card-btn {
+  cursor: pointer;
+  input {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.attendances-page {
+  .student-card-btn:has(input:checked) {
+    .student-card-box {
+      border-color: $main-color;
+      background-color: #0363f61a;
+    }
+    .student-name {
+      color: $main-color;
+    }
+  }
+}
+
+.add-groups-parent {
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+  @include max-768 {
+    margin-top: 130px;
+  }
+}
+
+.add-groups-btn {
+  min-width: 250px;
+  box-shadow: 0px 4px 15px #37a59b1a;
+  border: 2px dashed #0363f6;
+  height: 167px;
+  flex-direction: column;
+  background: transparent;
+  color: #0363f6;
+  font-size: 24px;
+  gap: 20px;
+  border-radius: 24px;
+  box-shadow: 0px 4px 15px #37a59b1a;
+  &::before {
+    content: "\2b";
+    color: $main-color;
+    font-size: 36px;
+  }
+  @include max-768 {
+    min-width: 210px;
+    height: 140px;
+    font-size: 20px;
+    border-radius: 20px;
+    &::before {
+      font-size: 30px;
+    }
+  }
+}
+
+.groups-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include max-1400 {
+    grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
+  }
+  column-gap: 13px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  @include max-768 {
+    justify-content: center;
+  }
+}
+.group-card-btn {
+  min-height: 287px;
+  height: 100%;
+  border: 3px solid transparent;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-inline: 10px;
+  // width: 319px;
+  // aspect-ratio: 319 / 276;
+  background-color: #ffffff;
+  border-radius: 15px;
+  transition: all linear 0.2s;
+  cursor: pointer;
+  input {
+    display: none;
+    cursor: pointer;
+  }
+  .group-name {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .student-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .student-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 35px;
+    row-gap: 5px;
+    background-color: #0363f608;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-inline: 10px;
+    padding-bottom: 12px;
+    min-height: 100px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    img {
+      width: 50px;
+    }
+    .number {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.6;
+      color: #0363f6;
+      text-align: center;
+    }
+    .student-name {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #000000;
+    }
+  }
+}
+
+.groups-parent {
+  .group-card-btn:has(> input:checked) {
+    border-color: $main-color;
+    background-color: #0363f61a;
+    .student-card {
+      background-color: #0363f608;
+    }
+  }
+}
+
+.student-cards {
+  .student-card:has(input:checked) {
+    background-color: #0363f61a;
+    border-color: $main-color;
+  }
+}
+
+.challenges-history-anchor,
+.wheel-history-anchor {
+  &::before {
+    display: none;
+  }
+  padding-inline: 25px;
+  min-width: 161px;
+  background-color: rgba($color: $main-color, $alpha: 0.1);
+  color: $main-color;
+  &:hover {
+    background-color: $main-color;
+    color: #fff;
+  }
+}
+
+.challengesBox-parent {
+  margin-top: 35px;
+  @include max-768 {
+    margin-top: 10px;
+  }
+  .title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.66;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 27px;
+    @include max-768 {
+      font-size: 20px;
+    }
+  }
+  .numbers-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 980px;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 20px;
+  }
+  .challenge-number-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 93.62px;
+    min-width: 80px;
+    padding-inline: 15px;
+    border: 2px solid #dee1e6;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 36px;
+    transition: all linear 0.2s;
+    color: #000000;
+    input {
+      display: none;
+      cursor: pointer;
+    }
+  }
+  .challenge-number-btn:has(input:checked) {
+    border-color: $main-color;
+    color: $main-color;
+  }
+  .challenge-number-btn:has(input:disabled) {
+    opacity: 0.5;
+    cursor: auto;
+  }
+}
+
+.challenges-history-page,
+.students-wheel-history-page {
+  .back-anchor {
+    padding-inline: 25px;
+    min-width: 79px;
+    background-color: rgba($color: $main-color, $alpha: 0.1);
+    color: $main-color;
+    &::before {
+      display: none;
+    }
+    &:hover {
+      color: #fff;
+      background-color: $main-color;
+    }
+  }
+}
+
+.wheel-parent {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include max-768 {
+    margin-top: 35px;
+    justify-content: flex-end;
+  }
+  .rotate-btn {
+    position: absolute;
+    top: 52.5%; /* نص الديف - نص الدايرة + نص الدايرة */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #0363f6;
+    color: #ffffff;
+    @include max-768 {
+      width: 50px;
+      height: 50px;
+      font-size: 13px;
+      top: 60%;
+    }
+  }
+  .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // clip-path: polygon(50% 50%, 100% 0, 100% 50%, 50% 50%);
+    // transform-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .text {
+      position: absolute;
+      top: 1%;
+      left: 41.5%;
+      transform: rotate(-90deg) translate(-50%, 0);
+      transform-origin: 50% 50%;
+      font-size: 12px;
+      display: block;
+      font-weight: 700;
+      text-align: center;
+      color: #000;
+      // max-width: 90px;
+      // max-width: 105px;
+      // transform: rotate(-16deg);
+      // top: 37%;
+      @include max-768 {
+        font-size: 10px;
+        left: 36.5%;
+        // max-width: 38px;
+      }
+    }
+  }
+  .circle-wrapper {
+    // background: conic-gradient(
+    //   from 0deg,
+    //   #cde0fd 0deg 36deg,
+    //   white 36deg 72deg,
+    //   #cde0fd 72deg 108deg,
+    //   white 108deg 144deg,
+    //   #cde0fd 144deg 180deg,
+    //   white 180deg 216deg,
+    //   #cde0fd 216deg 252deg,
+    //   white 252deg 288deg,
+    //   #cde0fd 288deg 324deg,
+    //   white 324deg 360deg
+    // );
+    overflow: hidden;
+    position: absolute;
+    margin-inline: auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: 3;
+    top: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform ease-in-out 5s;
+    transform-origin: 50% 50%;
+    @include max-768 {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .wheel-wrapper {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    @include max-768 {
+      width: 300px;
+      height: 300px;
+    }
+    .wheel-img {
+      width: 100%;
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      z-index: 2;
+    }
+    .indicator-img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-60%);
+      z-index: 4;
+      width: 45px;
+      top: 15px;
+      @include max-768 {
+        width: 30px;
+        top: 0;
+      }
+    }
+  }
+}
+
+// // تعريف المتغيّرات الأساسية
+// $items: 10; // عدد الأقسام
+// $segment: 360deg / $items;
+// $colors: #cde0fd, white; // مجموعة الألوان المستخدمة
+// $numColors: length($colors);
+
+// // دالة لإرجاع اللون بناءً على الفهرس
+// @function getColor($index) {
+//   @return nth($colors, (($index % $numColors) + 1));
+// }
+
+// // بناء سلسلة التدرّج (stops) بشكل ديناميكي
+// $stops: "";
+// @for $i from 0 through ($items - 1) {
+//   $start: ($i * $segment);
+//   $end: (($i + 1) * $segment);
+//   // إنشاء سلسلة القسم الحالي بصيغة "اللون زاوية البداية زاوية النهاية"
+//   $current-stop: "#{getColor($i)} #{$start} #{$end}";
+//   // إذا كان هذا أول عنصر، لا نضيف فاصلة، وإلا نضيف فاصلة قبل القسم
+//   $stops: if($i == 0, $current-stop, "#{$stops}, #{$current-stop}");
+// }
+
+// .circle-wrapper {
+//   background: conic-gradient(from 0deg, #{$stops});
+//   width: 400px;
+//   height: 400px;
+//   border-radius: 50%;
+//   position: relative;
+// }
+
+.countdown-parent {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  @include max-768 {
+    row-gap: 35px;
+    margin-top: 70px;
+  }
+  .number,
+  .colon {
+    font-size: 200px;
+    color: #000;
+    @include max-768 {
+      font-size: 80px;
+    }
+  }
+  .blue-color {
+    color: $main-color;
+  }
+  .timer {
+    display: flex;
+    align-items: center;
+  }
+
+  .time-control {
+    position: relative;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    @include max-768 {
+      min-width: 50px;
+    }
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    i {
+      font-size: 24px;
+      color: $main-color;
+      @include max-768 {
+        font-size: 20px;
+      }
+    }
+  }
+  .arrow.up {
+    top: 10px;
+    @include max-768 {
+      top: -8px;
+    }
+  }
+  .arrow.down {
+    bottom: 25px;
+    @include max-768 {
+      bottom: 0;
+    }
+  }
+  .start-timer-btn,
+  .stop-timer-btn {
+    min-width: 160px;
+    padding-inline: 40px;
+    @include max-768 {
+      min-width: 150px;
+      padding-inline: 35px;
+    }
+  }
+}

@@ -1,0 +1,269 @@
+.general_modal {
+  padding-inline: 20px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 120;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  display: none;
+  .input-holder {
+    margin-bottom: 10px;
+  }
+  .modal_sm {
+    width: 100%;
+    max-width: 375px;
+    margin-inline: auto;
+  }
+  .modal_lg {
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  .modal_box {
+    background-color: #fff;
+    padding-inline: 22px;
+    padding-bottom: 32px;
+    padding-top: 38px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow-y: auto;
+    transition: transform 0.3s ease-out;
+    transform: translate(-50%, calc(-50% - 50px));
+    max-height: 611px;
+    // transform: scale(0.97) translate(-50%, -50%);
+    // transition-delay: 0.3s;
+    // transition: transform ease-in-out 0.3s 0.3s;
+    &.transition-box {
+      transform: translate(-50%, -50%);
+    }
+    @include max-768 {
+      width: calc(100% - 40px); 
+    }
+  }
+
+  .modal_body{
+    @include max-768 {
+      form:has(.table){
+        display: grid;
+      }
+    }
+  }
+  .modal_upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 8px;
+  }
+  .modal_title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.66;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  .modal_text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  .modal_btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .general-btn {
+    min-width: 160px;
+    @include max-768 {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+  .outline-btn {
+    background-color: transparent;
+    border: 1px solid $main-color;
+    color: $main-color;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+  .close_modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    inset-inline-end: 20px;
+    z-index: 2;
+    &:hover {
+      i {
+        color: $main-color;
+      }
+    }
+    i {
+      color: #cfcfcf;
+      font-size: 22px;
+      transition: all linear 0.2s;
+    }
+  }
+}
+
+.general_modal {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    @include max-768 {
+      grid-template-columns: 1fr;
+    }
+  }
+  .letters-imgs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 7px;
+    row-gap: 13px;
+    label {
+      width: 53px;
+      height: 53px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid #dee1e6;
+      input {
+        display: none;
+        cursor: pointer;
+      }
+      img {
+        width: 44px;
+      }
+    }
+    label:has(input:checked) {
+      border-color: $main-color;
+    }
+  }
+  .imgs-input-holder {
+    margin-top: 5px;
+    grid-column: 1 / 3;
+    @include max-768 {
+      grid-column: unset;
+    }
+  }
+}
+
+.images_eduContent_modal {
+  .modal_title {
+    padding-bottom: 22px;
+    width: 100%;
+    padding-top: 38px;
+  }
+  .modal_upper {
+    margin-bottom: 0;
+  }
+  .modal_box {
+    padding: 0;
+  }
+  .eduContent-images {
+    padding-inline: 22px;
+    padding-bottom: 32px;
+  }
+}
+
+.confirm_attendanceAbsence_modal {
+  .general-btn {
+    padding-inline: 40px;
+    @include max-768 {
+      padding-inline: 30px;
+    }
+  }
+  .attendance-confirm-btn {
+    background-color: #2d8e36;
+    &:hover {
+      background-color: rgba($color: #2d8e36, $alpha: 0.8);
+    }
+  }
+  .absence-confirm-btn {
+    background-color: #e24a56;
+    &:hover {
+      background-color: rgba($color: #e24a56, $alpha: 0.8);
+    }
+  }
+}
+
+.add_points_success_modal,
+.deduct_points_success_modal {
+  .emotion-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    img {
+      width: 167px;
+      @include max-768 {
+        width: 140px;
+      }
+    }
+  }
+}
+
+.deduct_points_success_modal {
+  .emotion-img {
+    img {
+      width: 153px;
+      @include max-768 {
+        width: 130px;
+      }
+    }
+  }
+}
+
+.deduct_points_success_modal,
+.add_points_success_modal {
+  .general-btn {
+    min-width: 160px;
+    width: unset;
+  }
+}
+
+.group-creation-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  i {
+    font-size: 24px;
+    color: #0363f6;
+  }
+  .students-number {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #000000;
+  }
+}
+
+.challenge_modal {
+  .challenge-text {
+    text-align: start;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #000000;
+    margin-bottom: 0;
+  }
+}

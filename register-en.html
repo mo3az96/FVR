@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="images/logo-circle.png" type="image/webp" />
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="lib/intel-tel-input/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="lib/select2/css/select2.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/swiperjs/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Register</title>
+</head>
+
+<body>
+
+
+
+    <!-- Start Preloader -->
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+    <!-- End Preloader -->
+
+
+
+    <!-- Start Header -->
+    <header class="header form-header">
+        <div class="container-fluid">
+            <div class="header-content">
+                <a href="index-en.html" class="logo">
+                    <img src="images/logo-light.png" alt="logo">
+                </a>
+                <img class="logo-circle" src="images/logo-circle.png" alt="">
+                <div class="control-section">
+                    <div class="lang">
+                        <div class="icon-text">
+                            <i class="fa-light fa-globe"></i>
+                            <span class="lang-type">English</span>
+                        </div>
+                        <div class="lang-details">
+                            <ul>
+                                <li><a href="register.html">العربية</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="register-text">
+                        Already registered?
+                    </span>
+                    <a href="login-en.html" class="general-anchor login-anchor">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+
+    <section class="form-page-sec register-sec">
+        <div class="container">
+            <div class="form-content">
+                <div class="form-title-text">
+                    <h3 class="form-title">
+                        New registration
+                    </h3>
+                    <p class="form-text">
+                        Enter the activation code sent to your mobile number
+                    </p>
+                </div>
+                <div class="wizard">
+                    <form class="register-form">
+                        <div class="wizard-header">
+                            <div class="steps">
+                                <div class="steps-progress">
+                                    <ul class="progressbar list-unstyled wizard-step">
+                                        <li class="active" id="activeStep-1">
+                                            <div class="num">1</div>
+                                            <span>Basic information</span>
+                                        </li>
+                                        <li class="" id="activeStep-2">
+                                            <div class="num">2</div>
+                                            <span> Verification </span>
+                                        </li>
+                                        <li class="" id="activeStep-3">
+                                            <div class="num">3</div>
+                                            <span> Registration success</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard-body">
+                            <div class="step initial active" id="step_1">
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Full name
+                                    </label>
+                                    <input class="input" type="text">
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Mobile number
+                                    </label>
+                                    <input class="input" placeholder="5xxxxxxxx" type="tel">
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Email
+                                    </label>
+                                    <input class="input" type="email">
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Gender
+                                    </label>
+                                    <div class="radio-wrapper gender-radio-wrapper">
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" checked name="gender">
+                                            <span class="checkmark"></span>
+                                            Male
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Country
+                                    </label>
+                                    <select class="myselect" name="" id="country-select">
+                                        <option value="" selected disabled>Select from the list </option>
+                                        <option value="">Egypt </option>
+                                        <option value=""> Saudi Arabia </option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Region
+                                    </label>
+                                    <select class="myselect" name="" id="region-select">
+                                        <option value="" selected disabled>Select from the list </option>
+                                        <option value="">Region 1</option>
+                                        <option value=""> Region 2 </option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        City
+                                    </label>
+                                    <select class="myselect" name="" id="city-select">
+                                        <option value="" selected disabled>Select from the list </option>
+                                        <option value="">city 1 </option>
+                                        <option value=""> city 2 </option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Teaching subject
+                                    </label>
+                                    <div class="radio-wrapper">
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" checked name="subject">
+                                            <span class="checkmark"></span>
+                                            Islamic education
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Arabic
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Mathematics
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Sciences
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Physical and health education
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Computer
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Social studies
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            English
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Life and family skills
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Family arts and education
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Chemistry
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="subject">
+                                            <span class="checkmark"></span>
+                                            Biology
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Educational stage
+                                    </label>
+                                    <div class="radio-wrapper">
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" checked name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            Primary stage
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            Intermediate stage
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            Secondary stage
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            University education
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            Vocational education
+                                        </label>
+                                        <label class="label radio-label">
+                                            <input class="radio-input" type="radio" name="edu-stage">
+                                            <span class="checkmark"></span>
+                                            Continuing education
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Password
+                                    </label>
+                                    <div class="pass-input-wrapper">
+                                        <i class="fa-regular fa-eye icon"></i>
+                                        <input class="input" type="password">
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label">
+                                        Confirm password
+                                    </label>
+                                    <div class="pass-input-wrapper">
+                                        <i class="fa-regular fa-eye icon"></i>
+                                        <input class="input" type="password">
+                                    </div>
+                                </div>
+                                <div class="input-holder">
+                                    <label class="label  checkbox-label">
+                                        <input class="checkbox-input" type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <div class="approval-text">
+                                            I have read and agree to
+                                            <a class="terms-anchor" href="terms-en.html">Conditions and terms</a>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="wizard-btn-cont">
+                                    <button type="button" class="general-btn  w-100 first-btn"
+                                        onclick="activeStep($(this), 2)">
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step" id="step_2">
+                                <div class="verfiy-cont">
+                                    <div class="digit-group otp-form">
+                                        <input type="text" name="opt-field[]" class="otp-field" maxlength="1" />
+                                        <input type="text" disabled name="opt-field[]" class="otp-field"
+                                            maxlength="1" />
+                                        <input type="text" disabled name="opt-field[]" class="otp-field"
+                                            maxlength="1" />
+                                        <input type="text" disabled name="opt-field[]" class="otp-field"
+                                            maxlength="1" />
+                                        <input type="text" class="otp-value" hidden>
+                                    </div>
+                                    <div class="countDown-content">
+                                        <span class="counter-timer">
+                                            <span id="counter"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="wizard-btn-cont">
+                                    <button disabled type="button" class="general-btn  first-btn"
+                                        onclick="activeStep($(this), 3)">
+                                        Confirm
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step" id="step_3">
+                                <div class="success-content">
+                                    <i class="fa-thin fa-circle-check success-icon"></i>
+                                    <h2 class="success-title"> Registration has been completed successfully</h2>
+                                    <p class="success-text">
+                                        Your registration request has been successfully submitted. The account details
+                                        will be reviewed by the administration,
+                                        and appropriate action will be taken. You will be notified via the entered email
+                                        address
+                                    </p>
+                                    <a href="index-en.html" class="general-btn">
+                                        Back to home
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-copyright">
+                    <p class="copyright-text">
+                        © Future Virtual Reality Class 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="lib/jquery/jquery-3.7.0.min.js"></script>
+    <script src="lib/swiperjs/js/swiper-bundle.min.js"></script>
+    <script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/intel-tel-input/js/intlTelInputWithUtils.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/form-wizard.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

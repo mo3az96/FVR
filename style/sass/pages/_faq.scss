@@ -1,0 +1,111 @@
+//  common questiona section
+.faq-page-sec {
+  padding-bottom: 100px;
+  @include max-768 {
+    padding-bottom: 60px;
+  }
+}
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.faq-content {
+  display: flex;
+  align-items: center;
+  @include max-768 {
+    align-items: flex-start;
+  }
+}
+.faq-item {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px #0000001a;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  padding-inline: 30px;
+  padding-top: 27px;
+  padding-bottom: 35px;
+  cursor: pointer;
+  @include max-768 {
+    padding-inline: 20px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+  .faq-arrow {
+    color: #0363f6;
+    transition: all ease-in-out 0.1s;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    @include max-768 {
+      margin-top: 4px;
+    }
+  }
+
+  .faq-question {
+    font-size: 18px;
+    //   transition: all ease-in-out 0.1s;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+    margin-inline-start: 17px;
+    cursor: pointer;
+    max-width: 85%;
+    @include max-992 {
+      font-size: 16px;
+    }
+    @include max-768 {
+      line-height: 1.8;
+      font-size: 14px;
+      margin-inline-start: 12px;
+      padding-inline-end: 15px;
+    }
+  }
+
+  .faq-content {
+    .icon {
+      font-size: 18px;
+      display: flex;
+      margin-inline-start: auto;
+      align-items: center;
+      justify-content: center;
+      color: #c2c2c2;
+      transition: all linear 0.2s;
+    }
+  }
+  .faq-answer {
+    color: #000;
+    width: 95%;
+    padding-inline-start: 33px;
+    font-size: 16px;
+    line-height: 2;
+    text-align: start;
+    margin-top: 12px;
+    display: none;
+    font-weight: 400;
+    @include max-1200 {
+      width: 100%;
+      padding-inline-end: 50px;
+    }
+
+    @include max-768 {
+      font-size: 14px;
+      line-height: 1.9;
+      padding-inline-start: 27px;
+      padding-inline-end: 40px;
+    }
+  }
+}
+
+.faq-item.active {
+  .faq-content .icon {
+    transform: rotate(180deg);
+  }
+  .fa-plus:before {
+    content: "\f068";
+  }
+}

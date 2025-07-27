@@ -1,0 +1,292 @@
+.classes-parent {
+  @include max-992 {
+    display: grid;
+  }
+  .user-upper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    @include max-1200 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  .input-holder {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    @include max-768 {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .label {
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      @include max-768 {
+        padding-inline-start: 20px;
+      }
+    }
+  }
+  .year-semster-form {
+    margin-inline-start: auto;
+    @include max-1200 {
+      margin-inline-start: unset;
+      width: 100%;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    // flex-wrap: wrap;
+
+    @include max-768 {
+      gap: 20px;
+      flex-direction: column;
+      margin: 0;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+  .select2-container {
+    //     width: 100% !important;
+    // flex-shrink: 0;
+    min-width: 160px;
+  }
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    color: #343434;
+  }
+}
+
+html[dir="rtl"] {
+  .classes-parent {
+    .select2-container .select2-selection--single .select2-selection__rendered,
+    html[dir="ltr"]
+      .select2-container
+      .select2-selection--single
+      .select2-selection__rendered {
+      padding-inline: 20px;
+    }
+  }
+}
+
+
+.add-class-form,
+.add-session-form,
+.add-rank-form {
+  .inputs-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    @include max-768 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+
+
+// CLASS
+
+.class-text-details {
+  display: flex;
+  // margin-bottom: 20px;
+  align-items: center;
+}
+.goback-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 15px;
+  &:hover {
+    i {
+      color: $main-color;
+    }
+  }
+  i {
+    transition: color ease-in-out 0.2s;
+    font-size: 18px;
+    color: #000;
+  }
+}
+.choosen-class {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.65;
+  color: #0363f6;
+  margin-inline-start: 4px;
+}
+
+.class-parent {
+  @include max-1200 {
+    display: grid;
+  }
+  .user-upper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .general-anchor {
+    height: 48px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 15px #37a59b1a;
+    border: none;
+    &::before {
+      font-size: 14px;
+    }
+  }
+  .class-control-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-top: 20px;
+  }
+  .add-student-btn {
+    background: rgba($color: $main-color, $alpha: 0.1);
+    color: $main-color;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+      &::before {
+        color: #fff;
+      }
+    }
+    &::before {
+      content: "\2b";
+      color: $main-color;
+    }
+  }
+  .import-student-btn,
+  .export-student-btn {
+    background: rgba($color: #2d8e36, $alpha: 0.1);
+    color: #2d8e36;
+    &::before {
+      content: "\f1c3";
+      color: #2d8e36;
+    }
+    &:hover {
+      background-color: #2d8e36;
+      color: #fff;
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+  .group-history-btn {
+    background: rgba($color: #6390a4, $alpha: 0.1);
+    color: #6390a4;
+    &::before {
+      content: "\f500";
+      color: #6390a4;
+    }
+    &:hover {
+      background-color: #6390a4;
+      color: #fff;
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+  .wheel-history-btn {
+    background: rgba($color: #e13612, $alpha: 0.1);
+    color: #e13612;
+    &::before {
+      content: "\f14e";
+      color: #e13612;
+    }
+    &:hover {
+      background-color: #e13612;
+      color: #fff;
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+  .student-img {
+    max-width: 30px;
+    // max-height: 30px;
+  }
+}
+
+.classGroupHistory-parent , .classWheelHistory-parent{
+  @include max-1200 {
+    display: grid;
+  }
+}
+
+.points-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  margin-bottom: 20px;
+  @include max-768 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.point-box {
+  padding-inline: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 10px;
+  /* height: 90px; */
+  padding-top: 15px;
+  padding-bottom: 11px;
+  @include max-768 {
+    padding-top: 13px;
+    padding-bottom: 9px;
+  }
+  .point-title {
+    font-size: 14px;
+    line-height: 1.57;
+    margin-bottom: 0;
+  }
+  .point-number {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.66;
+    margin-bottom: 0;
+    @include max-768 {
+      font-size: 22px;
+      line-height: normal;
+    }
+  }
+  &.bg-gray {
+    background-color: rgba($color: #343434, $alpha: 0.1);
+    .point-title,
+    .point-number {
+      color: #343434;
+    }
+  }
+  &.bg-green {
+    background-color: rgba($color: #2d8e36, $alpha: 0.1);
+    .point-title,
+    .point-number {
+      color: #2d8e36;
+    }
+  }
+  &.bg-red {
+    background-color: rgba($color: #e24a56, $alpha: 0.1);
+    .point-title,
+    .point-number {
+      color: #e24a56;
+    }
+  }
+  &.bg-blue {
+    background-color: rgba($color: #0363f6, $alpha: 0.1);
+    .point-title,
+    .point-number {
+      color: #0363f6;
+    }
+  }
+}

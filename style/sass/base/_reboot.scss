@@ -1,0 +1,108 @@
+// Variables
+$main-color: #0363f6;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bahij TheSansArabic";
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 91.58px;
+  @include max-992 {
+    padding-top: 84.65px;
+  }
+  @include max-768 {
+    padding-top: 64.65px;
+  }
+  @include max-400 {
+    padding-top: 59.88px;
+  }
+  &.overflowVisible {
+    overflow: visible;
+  }
+  &.overflowHidden {
+    overflow: hidden;
+  }
+  &.bg-lightblue {
+    background-color: #f2f7ff;
+  }
+  &.success-header-body {
+    @include max-768 {
+      padding-top: 91.58px;
+    }
+  }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  margin: 0;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+a,
+button {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #efefef;
+}
+
+.container {
+  padding-inline: 15px;
+  @include min-1200 {
+    max-width: 1170px;
+  }
+  @include max-768 {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

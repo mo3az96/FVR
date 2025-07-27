@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="images/logo-circle.png" type="image/webp" />
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="lib/fancybox/css/fancybox.css">
+    <link rel="stylesheet" href="lib/intel-tel-input/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="lib/select2/css/select2.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="lib/swiperjs/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.css" />
+    <title> إدارة الحضور والغياب</title>
+</head>
+
+<body class="bg-lightblue">
+
+
+
+    <!-- Start Preloader -->
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+    <!-- End Preloader -->
+
+
+    <!-- Start Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.png" alt="logo">
+                </a>
+                <nav class="navigation">
+                    <div class="close-language-wrapper">
+                        <div class="lang">
+                            <div class="icon-text">
+                                <i class="fa-light fa-globe"></i>
+                                <span class="lang-type">العربية</span>
+                            </div>
+                            <div class="lang-details">
+                                <ul>
+                                    <li><a href="attendanceAbsence-en.html">English</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="close-btn">
+                            <i class="fa-regular fa-xmark icon"></i>
+                        </button>
+                    </div>
+                    <ul class="big-menu">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html"> عن المنصة </a></li>
+                        <li><a href="features.html"> مميزاتنا </a></li>
+                        <li><a href="reviews.html"> آراء المعلمين </a></li>
+                        <li><a href="contact.html"> تواصل معنا</a></li>
+                    </ul>
+                </nav>
+                <div class="control-section">
+                    <div class="lang">
+                        <div class="icon-text">
+                            <i class="fa-light fa-globe"></i>
+                            <span class="lang-type">العربية</span>
+                        </div>
+                        <div class="lang-details">
+                            <ul>
+                                <li><a href="attendanceAbsence-en.html">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="account.html" class="general-anchor myaccount-anchor">
+                        حسابي
+                    </a>
+                    <button class="bars">
+                        <i class="fa-regular fa-bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Start Session side menu -->
+    <div class="session-sidebar">
+        <a href="educationalContent.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-circle-play"></i>
+            </span>
+            <span class="session-item-text">
+                المحتوى التعليمي
+            </span>
+        </a>
+        <a href="attendanceAbsence.html" class="session-item-anchor active">
+            <span class="icon">
+                <i class="fa-thin fa-user-group"></i>
+            </span>
+            <span class="session-item-text">
+                إدارة الحضور والغياب
+            </span>
+        </a>
+        <a href="attendances.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-users"></i>
+            </span>
+            <span class="session-item-text">
+                قائمة الطلاب الحاضرين
+            </span>
+        </a>
+        <a href="pointsHistory.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-rectangle-history"></i>
+            </span>
+            <span class="session-item-text">
+                سجل نقاط الحصة
+            </span>
+        </a>
+        <a href="groupsEmpty.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-grid-2"></i>
+            </span>
+            <span class="session-item-text">
+                قائمة المجموعات
+            </span>
+        </a>
+        <a href="challengesBox.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-trophy"></i>
+            </span>
+            <span class="session-item-text">
+                صندوق التحديات
+            </span>
+        </a>
+        <a href="studentsWheel.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-compass"></i>
+            </span>
+            <span class="session-item-text">
+                عجلة اختيار الطلاب
+            </span>
+        </a>
+        <a href="countdown.html" class="session-item-anchor">
+            <span class="icon">
+                <i class="fa-thin fa-stopwatch"></i>
+            </span>
+            <span class="session-item-text">
+                المؤقت
+            </span>
+        </a>
+    </div>
+    <!-- End Session side menu -->
+
+
+
+    <!-- Start  attendanceAbsence-page -->
+    <section class="session-page attendanceAbsence-page">
+        <div class="container-fluid">
+            <div class="session-upper">
+                <div class="backToSessions">
+                    <a class="goback-arrow" href="sessions.html">
+                        <i class="fa-light fa-arrow-right"></i>
+                    </a>
+                    رجوع إلى القائمة الرئيسية
+                </div>
+                <div class="btns-wrapper">
+                    <button class="general-anchor add-student-attendance-btn modal_btn">
+                        اضافة جديد
+                    </button>
+                    <button type="submit" class="general-btn finish-session-btn modal_btn">
+                        تأكيد الإنتهاء
+                    </button>
+                </div>
+            </div>
+            <div class="students-cards">
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/خ.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">خالد سالم الجابري</h4>
+                </label>
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/غ.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">غياث أحمد المطيري</h4>
+                </label>
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/م.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">مروان خالد عبدالله</h4>
+                </label>
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/ر.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">رائد صالح عبدالعزيز</h4>
+                </label>
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/ج.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">جاسم خالد الشمري</h4>
+                </label>
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/ت.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">تركي سعود الغانم</h4>
+                </label>
+                <label class="student-card-btn  modal_btn">
+                    <input type="radio" name="avatar-img">
+                    <div class="student-card-box">
+                        <img src="images/letters/م.png" class="img" alt="">
+                        <div class="number">
+                            0
+                        </div>
+                    </div>
+                    <h4 class="student-name">منذر بندر الغامدي</h4>
+                </label>
+
+            </div>
+        </div>
+    </section>
+    <!-- End  attendanceAbsence-page -->
+
+
+
+
+
+
+    <!-- Start confirm_attendanceAbsence_modal -->
+    <div class="general_modal confirm_attendanceAbsence_modal">
+        <div class="modal_box modal_sm">
+            <div class="modal_content">
+                <button class="close_modal">
+                    <i class="fa-regular fa-xmark"></i>
+                </button>
+                <div class="modal_upper">
+                    <h3 class="modal_title">
+                        تأكيد الحضور/ الغياب
+                    </h3>
+                    <p class="modal_text">
+                        خالد سالم الجابري
+                    </p>
+                </div>
+                <div class="modal_btns">
+                    <button class="general-btn attendance-confirm-btn">
+                        تأكيد الحضور
+                    </button>
+                    <button class="general-btn absence-confirm-btn">
+                        تأكيد الغياب
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End confirm_attendanceAbsence_modal -->
+
+
+
+    <!-- Start add_student_attendance_modal  -->
+    <div class="general_modal add_student_attendance_modal">
+        <div class="modal_box modal_lg">
+            <div class="modal_content">
+                <button class="close_modal">
+                    <i class="fa-regular fa-xmark"></i>
+                </button>
+                <div class="modal_upper">
+                    <h3 class="modal_title">
+                        إضافة طالب
+                    </h3>
+                </div>
+                <div class="modal_body">
+                    <form class="add-student-attendanceAbsence-form">
+                        <div class="grid">
+                            <div class="input-holder">
+                                <label class="label">
+                                    اسم الطالب
+                                </label>
+                                <input class="input" type="text">
+                            </div>
+                            <div class="input-holder">
+                                <label class="label">
+                                    النوع
+                                </label>
+                                <select class="myselect" name="" id="attendance-gender-select">
+                                    <option value="" selected disabled> اختر من القائمة </option>
+                                    <option value="">ذكر</option>
+                                    <option value="">أنثى</option>
+                                </select>
+                            </div>
+                            <div class="input-holder imgs-input-holder">
+                                <label class="label">
+                                    اختر الصورة الرمزية
+                                </label>
+                                <div class="letters-imgs-wrapper">
+                                    <!-- Repeat the div 28 times, one for each Arabic letter -->
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/أ.png" alt="أ">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ب.png" alt="ب">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ت.png" alt="ت">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ث.png" alt="ث">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ج.png" alt="ج">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ح.png" alt="ح">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/خ.png" alt="خ">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/د.png" alt="د">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ذ.png" alt="ذ">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ر.png" alt="ر">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ز.png" alt="ز">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/س.png" alt="س">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ش.png" alt="ش">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ص.png" alt="ص">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ض.png" alt="ض">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ط.png" alt="ط">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ظ.png" alt="ظ">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ع.png" alt="ع">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/غ.png" alt="غ">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ف.png" alt="ف">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ق.png" alt="ق">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ك.png" alt="ك">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ل.png" alt="ل">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/م.png" alt="م">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ن.png" alt="ن">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ه.png" alt="ه">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/و.png" alt="و">
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="avatar-img">
+                                        <img src="images/letters/ي.png" alt="ي">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal_btns">
+                            <button class="general-btn">
+                                إضافة
+                            </button>
+                            <button class="general-btn outline-btn">
+                                إلغاء
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End add_student_attendance_modal  -->
+
+    <!-- Start finish_session_modal -->
+    <div class="general_modal finish_session_modal">
+        <div class="modal_box modal_sm">
+            <div class="modal_content">
+                <button class="close_modal">
+                    <i class="fa-regular fa-xmark"></i>
+                </button>
+                <div class="modal_upper">
+                    <h3 class="modal_title">
+                        إنتهاء الحصة
+                    </h3>
+                    <p class="modal_text">
+                        هل أنت متأكد من عملية الإنتهاء؟
+                    </p>
+                </div>
+                <div class="modal_btns">
+                    <button class="general-btn">
+                        تأكيد
+                    </button>
+                    <button class="general-btn outline-btn">
+                        إلغاء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End finish_session_modal -->
+
+
+    <script src="lib/jquery/jquery-3.7.0.min.js"></script>
+    <script src="lib/swiperjs/js/swiper-bundle.min.js"></script>
+    <script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/fancybox/js/fancybox.umd.js"></script>
+    <script src="lib/intel-tel-input/js/intlTelInputWithUtils.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

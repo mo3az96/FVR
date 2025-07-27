@@ -1,0 +1,55 @@
+.ranks-parent , .rewards-parent {
+  @include max-992 {
+    display: grid;
+  }
+}
+
+.addNewRank-parent {
+  .rewards-wrapper {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    @include max-768 {
+      display: grid;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.66;
+      color: #000000;
+    }
+  }
+  .reward-input-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    @include max-768 {
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-holder {
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 414px;
+    }
+    .general-anchor {
+      background: rgba(3, 99, 246, 0.1);
+      color: #0363f6;
+      height: 48px;
+      border-radius: 24px;
+      border: none;
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+        &::before {
+          color: #fff;
+        }
+      }
+      &::before {
+        content: "\2b";
+        color: $main-color;
+      }
+    }
+  }
+}

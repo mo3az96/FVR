@@ -1,0 +1,121 @@
+// Select2
+
+.form-page-sec,
+.edit-acc-form,
+.classes-parent,
+.add-class-form,
+.general_modal {
+  .select2-container {
+    width: 100% !important;
+    &::after {
+      content: "\f078";
+      font-family: "Font Awesome 6 Pro";
+      position: absolute;
+      inset-inline-end: 25px;
+      color: #343434;
+      transition: all 0.3s;
+      font-size: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+
+  .select2-container .select2-selection--single {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #dee1e6;
+  }
+  .select2-container--default[dir="rtl"]
+    .select2-selection--single
+    .select2-selection__arrow {
+    display: none;
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow
+    b {
+    display: none;
+  }
+  .select2-container--open {
+    .select2-selection--single {
+      border-color: $main-color !important;
+      border-radius: 20px;
+    }
+    &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  &:focus-visible {
+    outline: none;
+  }
+  border: 1px solid #dee1e6;
+}
+
+html[dir="rtl"] {
+  .form-page-sec,
+  .edit-acc-form {
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      padding-inline: 20px;
+    }
+  }
+}
+html[dir="ltr"] {
+  .form-page-sec,
+  .edit-acc-form {
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      padding-inline: 20px;
+    }
+  }
+}
+
+// .select2-hidden-accessible,
+// select {
+//   width: 100% !important;
+//   height: 48px !important;
+// }
+
+.select2-container--default .select2-results__option[aria-selected="true"] {
+  background-color: #fff;
+}
+.select2-container--default .select2-results__option--selected{
+  background-color: #fff;
+
+}
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: $main-color;
+  color: #fff;
+}
+
+html[dir="rtl"],
+html[dir="ltr"] {
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-inline: 30px;
+    @include max-768 {
+      padding-inline: 20px;
+    }
+  }
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  width: 100%;
+  color: #c2c2c2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.edit_class_modal,
+.edit_student_modal {
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    color: #000000;
+  }
+}

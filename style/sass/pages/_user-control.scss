@@ -1,0 +1,219 @@
+.user-control-page {
+  padding-bottom: 55px;
+  //   @include max-768 {
+  //     padding-top: 40px;
+  //   }
+  .page-title {
+    color: #0363f6;
+    margin-bottom: 20px;
+    @include max-992 {
+      text-align: center;
+    }
+  }
+}
+.user-content {
+  width: 100%;
+  padding-top: 20px;
+  @include max-768 {
+    padding-top: 0;
+  }
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: flex-start;
+  // grid-template-columns: 262px 1fr;
+  gap: 30px;
+  @include max-992 {
+    // grid-template-columns: 1fr;
+  }
+}
+.user-nav {
+  position: sticky;
+  top: 80px;
+  width: 262px;
+  flex-shrink: 0;
+  @include max-992 {
+    width: unset;
+    position: fixed;
+    top: 120px;
+    inset-inline-start: -262px;
+    display: flex;
+    align-items: flex-start;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      inset-inline-start: 0;
+      .user-menu {
+        box-shadow: 0px 4px 15px #0000001a;
+      }
+      .user-nav-toggle {
+        i::before {
+          content: "\f00d";
+        }
+      }
+    }
+  }
+}
+.user-menu {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px #0000001a;
+  border-radius: 10px;
+  padding-inline: 18px;
+  padding-top: 27px;
+  padding-bottom: 24px;
+  @include max-992 {
+    border-radius: 0;
+    border-end-end-radius: 10px;
+    box-shadow: none;
+    overflow-y: auto;
+    width: 262px;
+    max-height: calc(100vh - 200px);
+    flex-shrink: 0;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  }
+  .menu-li {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 16px;
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      .menu-anchor {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .menu-anchor {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease-in-out 0.2s;
+    &:hover {
+      color: $main-color;
+      .icon {
+        color: $main-color;
+      }
+    }
+
+    .icon {
+      font-size: 18px;
+      color: #c5c5c5;
+      margin-inline-end: 15px;
+      transition: all ease-in-out 0.2s;
+      min-width: 22.5px;
+      display: flex;
+      justify-content: center;
+    }
+    &::after {
+      content: "\f053";
+      font-family: "Font Awesome 6 pro";
+      font-weight: 300;
+      font-size: 12px;
+      color: #c5c5c5;
+      margin-inline-start: auto;
+      transition: all 0.3s ease-in-out;
+    }
+    &.active {
+      color: $main-color;
+      .icon {
+        color: $main-color;
+      }
+      &::after {
+        transform: rotate(-90deg);
+        color: $main-color;
+      }
+    }
+  }
+  .sub-menu {
+    padding-top: 18px;
+    padding-inline-start: 37.5px;
+    padding-inline-end: 30px;
+    display: none;
+    li {
+      margin-bottom: 10px;
+    }
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+    .sub-anchor {
+      font-size: 14px;
+      font-weight: 600;
+      color: #828282;
+      transition: all ease-in-out 0.2s;
+      &:hover,
+      &.active {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.user-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-color;
+  color: #fff;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-end-end-radius: 5px;
+  border-start-end-radius: 5px;
+  @include max-992 {
+    display: flex;
+  }
+}
+
+.user-title {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.65;
+  color: #000000;
+  @include max-768 {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+
+.edit-acc-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  .input-holder .input,
+  .input-holder .textarea {
+    color: #343434;
+  }
+  .btn-wrapper {
+    margin-top: 0;
+  }
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    color: #343434;
+  }
+  @include max-768 {
+    grid-template-columns: 1fr;
+  }
+}
+.edit-acc-form,
+.change-pass-form {
+  .general-btn {
+    min-width: 166px;
+    padding-inline: 40px;
+  }
+}
+
+.user-upper {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}

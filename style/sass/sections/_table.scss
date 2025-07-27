@@ -1,0 +1,678 @@
+// General Table
+.general-table {
+  width: 100%;
+  .table {
+    --bs-table-bg: #fff;
+    table-layout: fixed;
+    margin: 0;
+    border: none;
+    @include max-768 {
+      table-layout: auto;
+      th[colspan="2"],
+      td[colspan="2"] {
+        min-width: 120px;
+      }
+      th[colspan="3"],
+      td[colspan="3"] {
+        min-width: 160px;
+      }
+      th[colspan="4"],
+      td[colspan="4"] {
+        min-width: 190px;
+      }
+    }
+  }
+
+  &.table-responsive::-webkit-scrollbar {
+    display: none;
+  }
+  .table {
+    tbody,
+    td,
+    tfoot,
+    th,
+    tr {
+      border-bottom: 1px solid #ececec;
+    }
+    th,
+    thead tr {
+      color: #fff;
+      background-color: #0363f6;
+    }
+  }
+
+  .table > thead {
+    border: none;
+    tr {
+      border: none;
+    }
+  }
+  .table th,
+  .table td {
+    border: none;
+    box-shadow: none;
+    padding-block: 13px;
+    text-align: center;
+    height: 52px;
+    vertical-align: middle;
+    @include max-768 {
+      padding-inline-start: unset;
+      height: auto;
+    }
+  }
+  .table th {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    min-width: 85px;
+  }
+  .table td {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 400;
+    a,
+    button {
+      &:hover {
+        i {
+          color: $main-color;
+        }
+      }
+      i {
+        color: #a8a8a8;
+        font-size: 20px;
+        transition: all ease-in-out 0.2s;
+      }
+    }
+  }
+  .table {
+    td,
+    th {
+      text-align: start;
+      &:nth-of-type(1) {
+        padding-inline-start: 30px;
+      }
+      &:last-of-type {
+        @include min-768 {
+          padding-inline-end: 25px;
+        }
+      }
+    }
+  }
+
+  .text-red {
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #e24a56;
+  }
+}
+
+// Class Table
+.class-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 70px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 117px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 150px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(4) {
+        min-width: 72px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(5) {
+        min-width: 85px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(6) {
+        min-width: 121px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(7) {
+        min-width: 103px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(8),
+      &:nth-of-type(9) {
+        min-width: 65px;
+      }
+    }
+  }
+}
+
+// Points History Table
+.points-history-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 68px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 122px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 145px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(4) {
+        min-width: 138px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(5) {
+        min-width: 88px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(6) {
+        min-width: 79px;
+      }
+    }
+  }
+}
+
+// Class Group History Table
+.class-group-history-table {
+  .table {
+    table-layout: auto;
+
+    td,
+    th {
+      &:first-of-type {
+        min-width: 105px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 168px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 225px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(4) {
+        min-width: 170px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(5) {
+        min-width: 180px;
+      }
+    }
+  }
+}
+
+// Student List Table
+
+.student-list-table {
+  .table {
+    table-layout: auto;
+  }
+  td,
+  th {
+    &:first-of-type {
+      min-width: 68px;
+    }
+  }
+  td,
+  th {
+    &:nth-of-type(2) {
+      width: 100%;
+    }
+  }
+}
+
+// Class Wheel Table
+
+.class-wheel-history-table {
+  .table {
+    th[colspan="2"],
+    td[colspan="2"] {
+      min-width: 180px;
+    }
+  }
+}
+
+// Sessions Table
+.sessions-table {
+  .table {
+    @include max-768 {
+      th[colspan="2"],
+      td[colspan="2"] {
+        min-width: 160px;
+      }
+      th[colspan="3"],
+      td[colspan="3"] {
+        min-width: 190px;
+      }
+    }
+  }
+  .status {
+    text-align: start;
+    font-size: 14px;
+  }
+  .status.pending {
+    color: #df9413;
+  }
+  .status.completed {
+    color: #2d8e36;
+  }
+  .view-session-anchor {
+    cursor: auto;
+    i {
+      opacity: 0.5;
+    }
+    &.active {
+      cursor: pointer;
+      i {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sessions-table .table td a.view-session-anchor:hover i {
+  color: #a8a8a8;
+}
+.sessions-table .table td a.view-session-anchor.active:hover i {
+  color: $main-color;
+}
+
+// Points history page table
+
+.points-history-page-table {
+  .table {
+    td[colspan="5"],
+    th[colspan="5"] {
+      min-width: 250px;
+    }
+    th[colspan="2"],
+    td[colspan="2"] {
+      min-width: 100px;
+    }
+  }
+}
+
+// Challenges history page table
+.challenges-history-page-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 128px;
+        @include max-768 {
+          min-width: 100px;
+        }
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 205px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        width: 100%;
+        @include max-768 {
+          min-width: 960px;
+        }
+      }
+    }
+  }
+}
+
+// Students Wheel History Page
+
+.studentsWheelHistory-page-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 128px;
+        @include max-768 {
+          min-width: 100px;
+        }
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 205px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 250px;
+        @include max-992 {
+          min-width: 150px;
+        }
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(4) {
+        width: 100%;
+        @include max-768 {
+          min-width: 500px;
+        }
+      }
+    }
+  }
+}
+
+// Ranks Table
+
+.ranks-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 78px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 153px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 152px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(4) {
+        min-width: 102px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(5) {
+        min-width: 112px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(6) {
+        min-width: 110px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(7) {
+        min-width: 76px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(8) {
+        min-width: 65px;
+      }
+    }
+  }
+}
+
+.rank-rewards-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 128px;
+        @include max-768 {
+          min-width: 100px;
+        }
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 205px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        width: 100%;
+        @include max-768 {
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.rank-history-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 78px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 155px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 151px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(4) {
+        min-width: 110px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(5) {
+        min-width: 146px;
+      }
+    }
+  }
+}
+
+.edit-rank-modal-table {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 68px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 192px;
+        @include max-768 {
+          min-width: 160px;
+        }
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        min-width: 70px;
+      }
+    }
+  }
+}
+
+// Add New Rank Page Table
+.add-reward-table {
+  margin-bottom: 30px;
+  .table {
+    table-layout: fixed;
+    @include max-768 {
+      table-layout: auto;
+      td,
+      th {
+        &:first-of-type {
+          min-width: 75px;
+        }
+      }
+      td,
+      th {
+        &:nth-of-type(2) {
+          min-width: 200px;
+        }
+      }
+      td,
+      th {
+        &:nth-of-type(3) {
+          min-width: 85px;
+        }
+      }
+    }
+  }
+}
+
+// Adding Points Reasons Table
+
+.adding-points-reasons-table,
+.deducting-points-reasons-table,
+.challenges-table {
+  .table {
+    table-layout: fixed;
+    @include max-768 {
+      table-layout: auto;
+      td,
+      th {
+        &:first-of-type {
+          min-width: 75px;
+        }
+      }
+      td,
+      th {
+        &:nth-of-type(2) {
+          min-width: 193px;
+        }
+      }
+      td,
+      th {
+        &:nth-of-type(3) {
+          min-width: 350px;
+        }
+      }
+      td,
+      th {
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          min-width: 80px;
+        }
+      }
+    }
+  }
+}
+
+// Rewards Table
+
+.rewards-table .table th[colspan="2"],
+.general-table .table td[colspan="2"] {
+  @include max-768 {
+    min-width: 100px;
+  }
+}
+
+.rewards-history-table {
+  .table {
+    table-layout: auto;
+    td,
+    th {
+      &:first-of-type {
+        min-width: 128px;
+        @include max-768 {
+          min-width: 100px;
+        }
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(2) {
+        min-width: 230px;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(3) {
+        width: 100%;
+        @include max-768 {
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.challenges-table {
+  .table {
+    @include max-768 {
+      td,
+      th {
+        &:nth-of-type(3) {
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}

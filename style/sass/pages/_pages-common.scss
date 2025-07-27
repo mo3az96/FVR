@@ -1,0 +1,203 @@
+.banner {
+  position: relative;
+  margin-bottom: 70px;
+  @include max-768 {
+    margin-bottom: 35px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $main-color, $alpha: 0.8);
+    z-index: 1;
+  }
+  .banner-img {
+    height: 434px;
+    width: 100%;
+    object-fit: cover;
+    @include max-768 {
+      height: 250px;
+    }
+  }
+  .logo-white {
+    width: 437px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    @include max-768 {
+      width: 170px;
+    }
+  }
+}
+
+.about-page-sec,
+.features-page-sec {
+  margin-bottom: 100px;
+  @include max-768 {
+    margin-bottom: 40px;
+  }
+  .main-title,
+  .main-text {
+    max-width: 720px;
+    @include max-768 {
+      max-width: 100%;
+    }
+  }
+  .main-title {
+    margin-bottom: 20px;
+  }
+}
+
+.features-page-sec {
+  margin-bottom: 70px;
+  @include max-768 {
+    margin-bottom: 40px;
+  }
+  .banner {
+    &::after {
+      background-color: unset;
+      background-image: linear-gradient(180deg, #0363f600 0%, #0363f6 100%);
+    }
+    .logo-white {
+      width: 287px;
+      left: unset;
+      inset-inline-start: 30px;
+      top: unset;
+      bottom: 30px;
+      transform: unset;
+      z-index: 2;
+      @include max-768 {
+        width: 180px;
+        inset-inline-start: 20px;
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+.general-box {
+  padding-inline: 51px;
+  padding-top: 49px;
+  padding-bottom: 50px;
+  background-color: #edf4ff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  @include max-992 {
+    padding-inline: 25px;
+    padding-block: 35px;
+  }
+  @include max-768 {
+    padding-inline: 30px;
+    align-items: center;
+    padding-block: 35px;
+  }
+  .icon {
+    font-size: 48px;
+    color: #0363f6;
+    margin-bottom: 20px;
+    @include max-768 {
+      font-size: 35px;
+      // margin-bottom: 15px;
+    }
+  }
+  .box-title {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 20px;
+    @include max-768 {
+      font-size: 20px;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  .box-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 0;
+    @include max-768 {
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: center;
+    }
+  }
+}
+
+.grid-column-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  @include max-768 {
+    grid-template-columns: 1fr;
+  }
+}
+.grid-column-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @include max-992 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include max-768 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mission-vission {
+  padding-bottom: 100px;
+  @include max-768 {
+    padding-bottom: 50px;
+  }
+}
+
+
+.add-common-form {
+  .btn-wrapper {
+    gap: 10px;
+    margin-top: 5px;
+  }
+  .general-btn {
+    padding-inline: 40px;
+    min-width: 116px;
+  }
+  .outline-btn {
+    min-width: 158px;
+    background-color: transparent;
+    color: $main-color;
+    border: 1px solid $main-color;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
+
+
+.addingPointsReasons-parent , .deductingPointsReasons-parent {
+  @include max-992 {
+    display: grid;
+  }
+}
+
+
+.challenges-parent{
+    @include max-768{
+        display: grid;
+    }
+}
+
+
+.add-adding-reason-form , .add-deducting-reason-form , .add-new-reward-form , .add-new-challenge-form , .edit-challenge-form , .edit-reward-form , .edit-adding-reason-form , .edit-deducting-reason-form {
+  .input-holder .textarea {
+    height: 150px;
+  }
+}

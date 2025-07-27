@@ -1,0 +1,104 @@
+html[dir="ltr"] {
+  .mainBanner .banner-content .title {
+    line-height: 1.3;
+  }
+  .features-content .features-list li {
+    line-height: 1.5;
+  }
+  .copyright .copyright-text {
+    text-align: start;
+  }
+  .footer-items {
+    justify-content: flex-end;
+  }
+  .faq-arrow,
+  .goback-arrow {
+    transform: rotate(180deg);
+  }
+  .form-header .back-anchor::after,
+  .terms-privacy-wrapper .nav-list li::before {
+    transform: rotate(180deg);
+  }
+  .user-menu .menu-anchor::after {
+    content: "\f054";
+  }
+  .user-menu .menu-anchor.active::after {
+    transform: rotate(90deg);
+  }
+  .general-box .box-text {
+    line-height: 1.6;
+  }
+  .review-box .review-text {
+    line-height: 1.7;
+  }
+  .faq-item .faq-answer {
+    line-height: 1.8;
+  }
+  .features-content .features-list li i {
+    margin-top: 2px;
+  }
+  .copyright .tasawk-text a {
+    gap: 3px;
+  }
+
+  // *************************************************************************
+  .user-menu .sub-menu li {
+    line-height: 21px;
+  }
+  .user-menu .menu-anchor {
+    line-height: 1.4;
+  }
+  .user-menu .menu-anchor {
+    align-items: flex-start;
+  }
+  .user-menu .sub-menu .sub-anchor {
+    line-height: 1.35;
+  }
+  // .user-menu .sub-menu{
+  //   padding-inline-end: 27px;
+  // }
+  @include max-768 {
+    .cta-box .cta-text {
+      line-height: 1.5;
+    }
+    .copyright .copyright-text {
+      text-align: center;
+    }
+    .main-text,
+    .review-box .review-text {
+      line-height: 1.65;
+    }
+    .general-box .box-title {
+      line-height: 1.35;
+    }
+    .faq-item .faq-question {
+      line-height: 1.6;
+    }
+    .features-content .features-list li i {
+      margin-top: 3px;
+    }
+    .faq-item .faq-arrow {
+      margin-top: 0;
+    }
+    .contact-form-content .title {
+      line-height: 1.55;
+    }
+    .form-text {
+      line-height: 1.5;
+    }
+    .success-content .success-title {
+      line-height: 1.5;
+    }
+    .progressbar li span {
+      line-height: 1.3;
+    }
+
+    // *************************************************************************
+  }
+
+  @include max-370 {
+    .form-header .register-anchor {
+      padding-inline: 10px;
+    }
+  }
+}

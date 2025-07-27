@@ -1,0 +1,56 @@
+.values {
+  &::after {
+    top: -50%;
+    inset-inline-end: -30%;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 906px;
+    height: 906px;
+    background-image: radial-gradient(
+      closest-side at 50% 50%,
+      #0363f6 0%,
+      #000000 100%
+    );
+    opacity: 0.3;
+    bottom: -50%;
+    inset-inline-start: -30%;
+    z-index: 1;
+  }
+  .main-title {
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 6;
+    @include max-768{
+      margin-bottom: 30px;
+    }
+  }
+
+  .general-box {
+    background-color: rgba(255, 255, 255, 0.031372549);
+    align-items: center;
+    padding-inline: 35px;
+    padding-block: 50px;
+    position: relative;
+    z-index: 3;
+    @include max-768 {
+        padding: 30px;
+    }
+    // * {
+    //   position: relative;
+    //   z-index: 5;
+    // }
+    .icon {
+      color: #0363f6;
+      margin-bottom: 25px;
+    }
+    .box-title,
+    .box-text {
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

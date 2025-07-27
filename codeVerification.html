@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="images/logo-circle.png" type="image/webp" />
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="lib/intel-tel-input/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="lib/select2/css/select2.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="lib/swiperjs/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.css" />
+    <title>ادخال كود التفعيل</title>
+</head>
+
+<body>
+
+
+
+    <!-- Start Preloader -->
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+    <!-- End Preloader -->
+
+
+
+    <!-- Start Header -->
+    <header class="header form-header">
+        <div class="container-fluid">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.png" alt="logo">
+                </a>
+                <div class="control-section">
+                    <div class="lang">
+                        <div class="icon-text">
+                            <i class="fa-light fa-globe"></i>
+                            <span class="lang-type">العربية</span>
+                        </div>
+                        <div class="lang-details">
+                            <ul>
+                                <li><a href="codeVerification-en.html">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="forgetPassword.html" class="general-anchor back-anchor">
+                        رجوع
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <section class="form-page-sec forget-pass-sec">
+        <div class="container">
+            <div class="form-content">
+                <div class="form-title-text">
+                    <h3 class="form-title">
+                        ادخل كود التفعيل
+                    </h3>
+                    <p class="form-text">
+                        اضف رمز التحقق المرسل على جوالك
+                    </p>
+                </div>
+                <form action="" class="code-verification-form">
+                    <div class="verfiy-cont">
+                        <div class="digit-group otp-form">
+                            <input type="text" name="opt-field[]" class="otp-field" maxlength="1" />
+                            <input type="text" disabled name="opt-field[]" class="otp-field" maxlength="1" />
+                            <input type="text" disabled name="opt-field[]" class="otp-field" maxlength="1" />
+                            <input type="text" disabled name="opt-field[]" class="otp-field" maxlength="1" />
+                            <input type="text" class="otp-value" hidden>
+                        </div>
+                        <div class="countDown-content">
+                            <span class="counter-timer">
+                                <span id="counter"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a  href="resetPassword.html" class="general-btn disabled">
+                            تأكيد
+                        </a>
+                    </div>
+                </form>
+                <div class="form-copyright">
+                    <p class="copyright-text">
+                        فصل الواقع الإفتراضي المستقبلي ٢٠٢٥ ©
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="lib/jquery/jquery-3.7.0.min.js"></script>
+    <script src="lib/swiperjs/js/swiper-bundle.min.js"></script>
+    <script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/intel-tel-input/js/intlTelInputWithUtils.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/form-wizard.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>
