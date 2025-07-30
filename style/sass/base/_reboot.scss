@@ -1,5 +1,6 @@
 // Variables
-$main-color: #0363f6;
+$main-color: rgb(var(--main-color));
+$main-rgb: var(--main-color);
 
 * {
   margin: 0;
@@ -28,7 +29,7 @@ body {
     overflow: hidden;
   }
   &.bg-lightblue {
-    background-color: #f2f7ff;
+    background-color: rgba(var(--main-color), 0.05);
   }
   &.success-header-body {
     @include max-768 {

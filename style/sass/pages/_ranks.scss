@@ -34,8 +34,8 @@
       max-width: 414px;
     }
     .general-anchor {
-      background: rgba(3, 99, 246, 0.1);
-      color: #0363f6;
+      background: rgba(var(--main-color), 0.1);
+      color: $main-color;
       height: 48px;
       border-radius: 24px;
       border: none;

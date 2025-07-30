@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    background-color: rgba($color: $main-color, $alpha: 0.1);
+    background-color: rgba(var(--main-color), 0.1);
     color: $main-color;
     min-width: 108px;
     height: 36px;
@@ -123,8 +123,8 @@
 
   .add-student-attendance-btn,
   .add-eduContent-btn {
-    background: rgba(3, 99, 246, 0.1);
-    color: #0363f6;
+    background: rgba(var(--main-color), 0.1);
+    color: $main-color;
     &:hover {
       background-color: $main-color;
     }
@@ -285,7 +285,7 @@
 
       i {
         font-size: 48px;
-        color: #0363f6;
+        color: $main-color;
       }
     }
     span {
@@ -364,7 +364,7 @@
     .number {
       font-size: 48px;
       font-weight: 700;
-      color: #0363f6;
+      color: $main-color;
       @include max-768 {
         font-size: 40px;
       }
@@ -399,7 +399,7 @@
   .student-card-btn:has(input:checked) {
     .student-card-box {
       border-color: $main-color;
-      background-color: #0363f61a;
+      background-color: rgba(var(--main-color), 0.102);
     }
     .student-name {
       color: $main-color;
@@ -419,11 +419,11 @@
 .add-groups-btn {
   min-width: 250px;
   box-shadow: 0px 4px 15px #37a59b1a;
-  border: 2px dashed #0363f6;
+  border: 2px dashed $main-color;
   height: 167px;
   flex-direction: column;
   background: transparent;
-  color: #0363f6;
+  color: $main-color;
   font-size: 24px;
   gap: 20px;
   border-radius: 24px;
@@ -494,7 +494,7 @@
     align-items: center;
     column-gap: 35px;
     row-gap: 5px;
-    background-color: #0363f608;
+    background-color: rgba(var(--main-color), 0.031);
     border-radius: 15px;
     padding-top: 10px;
     padding-inline: 10px;
@@ -509,7 +509,7 @@
       font-size: 30px;
       font-weight: 700;
       line-height: 1.6;
-      color: #0363f6;
+      color: $main-color;
       text-align: center;
     }
     .student-name {
@@ -524,16 +524,16 @@
 .groups-parent {
   .group-card-btn:has(> input:checked) {
     border-color: $main-color;
-    background-color: #0363f61a;
+    background-color: rgba(var(--main-color), 0.102);
     .student-card {
-      background-color: #0363f608;
+      background-color: rgba(var(--main-color), 0.031);
     }
   }
 }
 
 .student-cards {
   .student-card:has(input:checked) {
-    background-color: #0363f61a;
+    background-color: rgba(var(--main-color), 0.102);
     border-color: $main-color;
   }
 }
@@ -545,7 +545,7 @@
   }
   padding-inline: 25px;
   min-width: 161px;
-  background-color: rgba($color: $main-color, $alpha: 0.1);
+  background-color: rgba(var(--main-color), 0.1);
   color: $main-color;
   &:hover {
     background-color: $main-color;
@@ -610,7 +610,7 @@
   .back-anchor {
     padding-inline: 25px;
     min-width: 79px;
-    background-color: rgba($color: $main-color, $alpha: 0.1);
+    background-color: rgba(var(--main-color), 0.1);
     color: $main-color;
     &::before {
       display: none;
@@ -646,7 +646,7 @@
     text-align: center;
     font-size: 18px;
     font-weight: 700;
-    background-color: #0363f6;
+    background-color: $main-color;
     color: #ffffff;
     @include max-768 {
       width: 50px;

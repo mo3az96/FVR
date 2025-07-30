@@ -10,7 +10,7 @@
     height: 906px;
     background-image: radial-gradient(
       closest-side at 50% 50%,
-      #0363f6 0%,
+      $main-color 0%,
       #000000 100%
     );
     opacity: 0.3;
@@ -44,7 +44,7 @@
     //   z-index: 5;
     // }
     .icon {
-      color: #0363f6;
+      color: $main-color;
       margin-bottom: 25px;
     }
     .box-title,

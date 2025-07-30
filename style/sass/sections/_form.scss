@@ -84,7 +84,7 @@
   min-width: 140px;
   padding-inline: 50px;
   height: 48px;
-  background-color: #0363f6;
+  background-color: $main-color;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@
   text-align: center;
   transition: all ease-in-out 0.2s;
   &:hover {
-    background-color: rgba($color: $main-color, $alpha: 0.8);
+    background-color: rgba(var(--main-color), 0.8);
     color: #fff;
   }
 }
@@ -242,7 +242,7 @@
     text-decoration: underline;
     font-size: 14px;
     // line-height: 1.57;
-    color: #0363f6;
+    color: $main-color;
   }
 }
 .radio-wrapper {
@@ -334,7 +334,7 @@
       font-family: "Font Awesome 6 Pro";
       display: none;
       font-size: 11px;
-      color: #0363f6;
+      color: $main-color;
       display: none;
       width: unset;
       height: unset;

@@ -5,7 +5,7 @@
   }
   .quote-icon {
     font-size: 48px;
-    color: #0363f6;
+    color: $main-color;
     margin-bottom: 20px;
     display: inline-block;
     @include max-768 {

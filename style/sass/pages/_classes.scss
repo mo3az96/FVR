@@ -76,7 +76,6 @@ html[dir="rtl"] {
   }
 }
 
-
 .add-class-form,
 .add-session-form,
 .add-rank-form {
@@ -89,9 +88,6 @@ html[dir="rtl"] {
     }
   }
 }
-
-
-
 
 // CLASS
 
@@ -120,7 +116,7 @@ html[dir="rtl"] {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.65;
-  color: #0363f6;
+  color: $main-color;
   margin-inline-start: 4px;
 }
 
@@ -150,7 +146,7 @@ html[dir="rtl"] {
     margin-top: 20px;
   }
   .add-student-btn {
-    background: rgba($color: $main-color, $alpha: 0.1);
+    background: rgba(var(--main-color), 0.1);
     color: $main-color;
     &:hover {
       background-color: $main-color;
@@ -216,7 +212,8 @@ html[dir="rtl"] {
   }
 }
 
-.classGroupHistory-parent , .classWheelHistory-parent{
+.classGroupHistory-parent,
+.classWheelHistory-parent {
   @include max-1200 {
     display: grid;
   }
@@ -283,10 +280,10 @@ html[dir="rtl"] {
     }
   }
   &.bg-blue {
-    background-color: rgba($color: #0363f6, $alpha: 0.1);
+    background-color: rgba(var(--main-color), 0.1);
     .point-title,
     .point-number {
-      color: #0363f6;
+      color: $main-color;
     }
   }
 }

@@ -217,7 +217,7 @@
   align-items: center;
   .success-icon {
     font-size: 72px;
-    color: #0363f6;
+    color: $main-color;
     margin-bottom: 30px;
     @include max-768 {
       font-size: 55px;

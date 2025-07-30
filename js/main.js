@@ -1,8 +1,31 @@
 $(window).on("load", function () {
+  const theme = localStorage.getItem("custom_theme");
+  if (theme) {
+    document.documentElement.style.setProperty("--main-color", theme);
+  }
+  let main_color = getComputedStyle(document.documentElement)
+    .getPropertyValue("--main-color")
+    .trim();
+
+  $("input[name='color']").each(function () {
+    if ($(this).val() === main_color) {
+      $(this).prop("checked", true);
+    }
+  });
+
   $(".preloader").fadeOut();
 });
 
 $(document).ready(function () {
+  ////////////////////* theme *////////////////////
+
+  let color_radio = $("input[name='color']");
+  color_radio.change(function () {
+    const color = $(this).val();
+    document.documentElement.style.setProperty("--main-color", color);
+    localStorage.setItem("custom_theme", color);
+  });
+
   // User Menu active links
   $(".user-menu .menu-anchor:not(.logout-btn)").click(function () {
     $(this).toggleClass("active").siblings(".sub-menu").slideToggle();
@@ -614,9 +637,11 @@ $(document).ready(function () {
 
   const gradientStops = stops.join(", ");
 
-  document.querySelector(
-    ".circle-wrapper"
-  ).style.background = `conic-gradient(from 0deg, ${gradientStops})`;
+  if (document.querySelector(".circle-wrapper")) {
+    document.querySelector(
+      ".circle-wrapper"
+    ).style.background = `conic-gradient(from 0deg, ${gradientStops})`;
+  }
 
   // ***************************
 

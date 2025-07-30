@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  --main-color: 3, 99, 246;
+}
+
 @font-face {
   font-family: "Bahij TheSansArabic";
   src: url("../fonts/bahij/BahijTheSansArabic-ExtraBold.woff2") format("woff2"), url("../fonts/bahij/BahijTheSansArabic-ExtraBold.woff") format("woff"), url("../fonts/bahij/BahijTheSansArabic-ExtraBold.ttf") format("truetype");
@@ -89,7 +93,7 @@ body.overflowHidden {
   overflow: hidden;
 }
 body.bg-lightblue {
-  background-color: #f2f7ff;
+  background-color: rgba(var(--main-color), 0.05);
 }
 @media only screen and (max-width: 767px) {
   body.success-header-body {
@@ -150,7 +154,7 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0363f6;
+  background: rgb(var(--main-color));
   border-radius: 0;
 }
 
@@ -174,7 +178,7 @@ button:focus {
 }
 
 .general-anchor {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   border-radius: 20px;
   min-width: 97px;
   height: 40px;
@@ -200,11 +204,11 @@ button:focus {
 }
 .general-anchor:hover {
   background-color: transparent;
-  color: #0363f6;
-  border-color: #0363f6;
+  color: rgb(var(--main-color));
+  border-color: rgb(var(--main-color));
 }
 .general-anchor:hover::before {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 @media only screen and (max-width: 767px) {
   .general-anchor {
@@ -307,7 +311,7 @@ button:focus {
   content: "";
   width: 906px;
   height: 906px;
-  background-image: radial-gradient(closest-side at 50% 50%, #0363f6 0%, #000000 100%);
+  background-image: radial-gradient(closest-side at 50% 50%, rgb(var(--main-color)) 0%, #000000 100%);
   opacity: 0.3;
   top: -50%;
   inset-inline-end: -50%;
@@ -338,7 +342,7 @@ button:focus {
   left: -100%;
   width: 90%;
   height: 100%;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   animation: preloaderAnimation 3s infinite linear;
 }
 
@@ -370,7 +374,7 @@ button:focus {
   transition: all linear 0.2s;
 }
 .bread-link:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 ol.breadcrumb li a,
@@ -415,7 +419,7 @@ ol.breadcrumb li {
   }
 }
 .general-swiper-parent .swiper-pagination-bullet-active {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   opacity: 1;
 }
 
@@ -485,18 +489,18 @@ ol.breadcrumb li {
 .myaccount-anchor,
 .form-header .back-anchor {
   min-width: 110px;
-  background-color: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background-color: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
   border: none;
 }
 .myaccount-anchor::before,
 .form-header .back-anchor::before {
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-weight: 300;
 }
 .myaccount-anchor:hover,
 .form-header .back-anchor:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 .myaccount-anchor:hover::before,
@@ -526,7 +530,7 @@ ol.breadcrumb li {
   content: "\f060";
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-size: 16px;
   transition: all ease-in-out 0.2s;
 }
@@ -596,7 +600,7 @@ ol.breadcrumb li {
   }
 }
 .navigation .big-menu > li > a:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .show-navigation {
@@ -663,7 +667,7 @@ ol.breadcrumb li {
     display: flex;
   }
   .bars:hover .icon {
-    color: #0363f6;
+    color: rgb(var(--main-color));
   }
 }
 
@@ -712,12 +716,12 @@ ol.breadcrumb li {
 }
 .lang .lang-details a:hover {
   background-color: #f1f1f1;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .lang:hover .lang-type,
 .lang:hover .icon-text i,
 .lang:hover .lang-type::after {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .lang:hover .lang-details {
   transform: scale(0.95) translateX(-50%);
@@ -956,12 +960,12 @@ ol.breadcrumb li {
   }
 }
 .about .readmore-anchor {
-  background-color: rgba(3, 100, 247, 0.1);
-  color: #0363f6;
+  background-color: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
   border: none;
 }
 .about .readmore-anchor:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 .about .img {
@@ -1039,7 +1043,7 @@ ol.breadcrumb li {
   }
 }
 .features-content .features-list li i {
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-size: 26px;
   margin-top: 5px;
 }
@@ -1059,7 +1063,7 @@ ol.breadcrumb li {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .features-content .call-anchor:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 .features-content .joinus-anchor:hover {
@@ -1107,7 +1111,7 @@ ol.breadcrumb li {
 }
 .reviews .quote-icon {
   font-size: 48px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   margin-bottom: 20px;
   display: inline-block;
 }
@@ -1211,7 +1215,7 @@ ol.breadcrumb li {
 }
 
 .cta-box {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   padding-top: 54px;
   padding-inline: 80px;
   padding-bottom: 67px;
@@ -1296,7 +1300,7 @@ ol.breadcrumb li {
 }
 .cta-box .joinus-anchor:hover {
   background-color: #fff;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .banner {
@@ -1314,7 +1318,7 @@ ol.breadcrumb li {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(3, 99, 246, 0.8);
+  background-color: rgba(var(--main-color), 0.8);
   z-index: 1;
 }
 .banner .banner-img {
@@ -1381,7 +1385,7 @@ ol.breadcrumb li {
 }
 .features-page-sec .banner::after {
   background-color: unset;
-  background-image: linear-gradient(180deg, rgba(3, 99, 246, 0) 0%, #0363f6 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(var(--main-color)) 100%);
 }
 .features-page-sec .banner .logo-white {
   width: 287px;
@@ -1424,7 +1428,7 @@ ol.breadcrumb li {
 }
 .general-box .icon {
   font-size: 48px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 767px) {
@@ -1509,11 +1513,11 @@ ol.breadcrumb li {
 .add-common-form .outline-btn {
   min-width: 158px;
   background-color: transparent;
-  color: #0363f6;
-  border: 1px solid #0363f6;
+  color: rgb(var(--main-color));
+  border: 1px solid rgb(var(--main-color));
 }
 .add-common-form .outline-btn:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 
@@ -1542,7 +1546,7 @@ ol.breadcrumb li {
   content: "";
   width: 906px;
   height: 906px;
-  background-image: radial-gradient(closest-side at 50% 50%, #0363f6 0%, #000000 100%);
+  background-image: radial-gradient(closest-side at 50% 50%, rgb(var(--main-color)) 0%, #000000 100%);
   opacity: 0.3;
   bottom: -50%;
   inset-inline-start: -30%;
@@ -1574,7 +1578,7 @@ ol.breadcrumb li {
   }
 }
 .values .general-box .icon {
-  color: #0363f6;
+  color: rgb(var(--main-color));
   margin-bottom: 25px;
 }
 .values .general-box .box-title,
@@ -1628,7 +1632,7 @@ ol.breadcrumb li {
   }
 }
 .faq-item .faq-arrow {
-  color: #0363f6;
+  color: rgb(var(--main-color));
   transition: all ease-in-out 0.1s;
   font-size: 18px;
   display: flex;
@@ -1880,7 +1884,7 @@ ol.breadcrumb li {
 }
 .contact-list li > .icon {
   font-size: 16px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .contact-list li:last-of-type {
   margin-bottom: 0;
@@ -1894,7 +1898,7 @@ ol.breadcrumb li {
   transition: all linear 0.2s;
 }
 .contact-list li a:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .contact-list li a:focus {
   text-decoration: none;
@@ -1921,7 +1925,7 @@ ol.breadcrumb li {
 }
 .contact-social .icon {
   font-size: 18px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   transition: all linear 0.2s;
 }
 
@@ -1984,7 +1988,7 @@ ol.breadcrumb li {
 }
 .input-holder .input:focus,
 .input-holder .textarea:focus {
-  border-color: #0363f6;
+  border-color: rgb(var(--main-color));
   outline: none;
 }
 @media only screen and (max-width: 767px) {
@@ -2056,7 +2060,7 @@ ol.breadcrumb li {
   min-width: 140px;
   padding-inline: 50px;
   height: 48px;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -2068,7 +2072,7 @@ ol.breadcrumb li {
   transition: all ease-in-out 0.2s;
 }
 .general-btn:hover {
-  background-color: rgba(3, 99, 246, 0.8);
+  background-color: rgba(var(--main-color), 0.8);
   color: #fff;
 }
 
@@ -2089,7 +2093,7 @@ ol.breadcrumb li {
   padding-inline-start: 20px;
 }
 .form-page-sec .forget-pass-txt:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .login-form,
@@ -2234,7 +2238,7 @@ ol.breadcrumb li {
 .register-form .terms-anchor {
   text-decoration: underline;
   font-size: 14px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .radio-wrapper {
@@ -2280,7 +2284,7 @@ ol.breadcrumb li {
 .input-holder .radio-label .checkbox-input:checked ~ .checkmark,
 .input-holder .checkbox-label .radio-input:checked ~ .checkmark,
 .input-holder .checkbox-label .checkbox-input:checked ~ .checkmark {
-  border-color: #0363f6;
+  border-color: rgb(var(--main-color));
 }
 .input-holder .radio-label .radio-input:checked ~ .checkmark::after,
 .input-holder .radio-label .checkbox-input:checked ~ .checkmark::after,
@@ -2309,7 +2313,7 @@ ol.breadcrumb li {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
 }
 
@@ -2318,7 +2322,7 @@ ol.breadcrumb li {
 }
 .input-holder .checkbox-label .checkbox-input:checked ~ .checkmark {
   background-color: transparent;
-  border-color: #0363f6;
+  border-color: rgb(var(--main-color));
 }
 .input-holder .checkbox-label .checkbox-input:checked ~ .checkmark::after {
   display: block;
@@ -2337,7 +2341,7 @@ ol.breadcrumb li {
   font-family: "Font Awesome 6 Pro";
   display: none;
   font-size: 11px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   display: none;
   width: unset;
   height: unset;
@@ -2504,7 +2508,7 @@ ol.breadcrumb li {
 .classes-parent .select2-container--open .select2-selection--single,
 .add-class-form .select2-container--open .select2-selection--single,
 .general_modal .select2-container--open .select2-selection--single {
-  border-color: #0363f6 !important;
+  border-color: rgb(var(--main-color)) !important;
   border-radius: 20px;
 }
 .form-page-sec .select2-container--open::after,
@@ -2541,7 +2545,7 @@ html[dir=ltr] .edit-acc-form .select2-container .select2-selection--single .sele
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 
@@ -2632,7 +2636,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 
 .progressbar li.active::after {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
 }
 
 .progressbar li {
@@ -2684,7 +2688,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   flex-shrink: 0;
   margin-inline-end: 10px;
 }
@@ -2695,12 +2699,12 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 
 .progressbar li.active .num {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 
 .progressbar li.active span {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .digit-group {
@@ -2732,8 +2736,8 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 
 .digit-group input:focus {
-  border-color: #0363f6;
-  color: #0363f6;
+  border-color: rgb(var(--main-color));
+  color: rgb(var(--main-color));
 }
 
 .verfiy-cont {
@@ -2762,7 +2766,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 .success-content .success-icon {
   font-size: 72px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 767px) {
@@ -2791,7 +2795,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   padding-bottom: 55px;
 }
 .user-control-page .page-title {
-  color: #0363f6;
+  color: rgb(var(--main-color));
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 991px) {
@@ -2888,10 +2892,10 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   transition: all ease-in-out 0.2s;
 }
 .user-menu .menu-anchor:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .user-menu .menu-anchor:hover .icon {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .user-menu .menu-anchor .icon {
   font-size: 18px;
@@ -2912,14 +2916,14 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   transition: all 0.3s ease-in-out;
 }
 .user-menu .menu-anchor.active {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .user-menu .menu-anchor.active .icon {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .user-menu .menu-anchor.active::after {
   transform: rotate(-90deg);
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .user-menu .sub-menu {
   padding-top: 18px;
@@ -2940,14 +2944,14 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   transition: all ease-in-out 0.2s;
 }
 .user-menu .sub-menu .sub-anchor:hover, .user-menu .sub-menu .sub-anchor.active {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .user-nav-toggle {
   display: none;
   align-items: center;
   justify-content: center;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
   font-size: 20px;
   width: 40px;
@@ -3049,7 +3053,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 .general-table .table th,
 .general-table .table thead tr {
   color: #fff;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
 }
 .general-table .table > thead {
   border: none;
@@ -3086,7 +3090,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 .general-table .table td a:hover i,
 .general-table .table td button:hover i {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .general-table .table td a i,
 .general-table .table td button i {
@@ -3259,7 +3263,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 
 .sessions-table .table td a.view-session-anchor.active:hover i {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .points-history-page-table .table td[colspan="5"],
@@ -3672,7 +3676,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   margin-inline-end: 15px;
 }
 .goback-arrow:hover i {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .goback-arrow i {
   transition: color ease-in-out 0.2s;
@@ -3684,7 +3688,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   font-weight: 700;
   font-size: 20px;
   line-height: 1.65;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   margin-inline-start: 4px;
 }
 
@@ -3716,11 +3720,11 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   margin-top: 20px;
 }
 .class-parent .add-student-btn {
-  background: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
 }
 .class-parent .add-student-btn:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 .class-parent .add-student-btn:hover::before {
@@ -3728,7 +3732,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .class-parent .add-student-btn::before {
   content: "+";
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .class-parent .import-student-btn,
 .class-parent .export-student-btn {
@@ -3784,7 +3788,8 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 
 @media only screen and (max-width: 1199px) {
-  .classGroupHistory-parent, .classWheelHistory-parent {
+  .classGroupHistory-parent,
+  .classWheelHistory-parent {
     display: grid;
   }
 }
@@ -3858,11 +3863,11 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   color: #e24a56;
 }
 .point-box.bg-blue {
-  background-color: rgba(3, 99, 246, 0.1);
+  background-color: rgba(var(--main-color), 0.1);
 }
 .point-box.bg-blue .point-title,
 .point-box.bg-blue .point-number {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .general_modal {
@@ -3956,11 +3961,11 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .general_modal .outline-btn {
   background-color: transparent;
-  border: 1px solid #0363f6;
-  color: #0363f6;
+  border: 1px solid rgb(var(--main-color));
+  color: rgb(var(--main-color));
 }
 .general_modal .outline-btn:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 .general_modal .close_modal {
@@ -3973,7 +3978,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   z-index: 2;
 }
 .general_modal .close_modal:hover i {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .general_modal .close_modal i {
   color: #cfcfcf;
@@ -4019,7 +4024,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   width: 44px;
 }
 .general_modal .letters-imgs-wrapper label:has(input:checked) {
-  border-color: #0363f6;
+  border-color: rgb(var(--main-color));
 }
 .general_modal .imgs-input-holder {
   margin-top: 5px;
@@ -4109,7 +4114,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .group-creation-counter i {
   font-size: 24px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .group-creation-counter .students-number {
   font-size: 48px;
@@ -4145,8 +4150,8 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   display: flex;
   align-items: center;
   gap: 4px;
-  background-color: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background-color: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
   min-width: 108px;
   height: 36px;
   padding-inline: 20px;
@@ -4156,13 +4161,13 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .file-input-holder .add-file-btn:hover {
   color: #fff;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
 }
 .file-input-holder .add-file-btn:hover i {
   color: #fff;
 }
 .file-input-holder .add-file-btn i {
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-size: 14px;
   transition: all linear 0.2s;
 }
@@ -4256,17 +4261,17 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .session-upper .add-student-attendance-btn,
 .session-upper .add-eduContent-btn {
-  background: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
 }
 .session-upper .add-student-attendance-btn:hover,
 .session-upper .add-eduContent-btn:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
 }
 .session-upper .add-student-attendance-btn::before,
 .session-upper .add-eduContent-btn::before {
   content: "+";
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .session-upper .add-points-btn {
   background: rgba(45, 142, 54, 0.1);
@@ -4327,7 +4332,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 @media only screen and (max-width: 767px) {
   .session-sidebar .session-item-anchor.active .icon {
-    background-color: #0363f6;
+    background-color: rgb(var(--main-color));
   }
   .session-sidebar .session-item-anchor.active .icon i {
     color: #fff;
@@ -4346,7 +4351,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 .session-sidebar .session-item-anchor .icon i {
   position: relative;
   z-index: 3;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-size: 24px;
   transition: all ease-out 0.4s;
 }
@@ -4372,7 +4377,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   height: 45px;
   border-start-end-radius: 10px;
   border-end-end-radius: 10px;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
 }
 @media only screen and (max-width: 767px) {
   .session-sidebar .session-item-anchor .session-item-text {
@@ -4423,7 +4428,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .eduContent-btns .modal_btn .box i {
   font-size: 48px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .eduContent-btns .modal_btn span {
   font-size: 14px;
@@ -4512,7 +4517,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 .student-card-btn .student-card-box .number {
   font-size: 48px;
   font-weight: 700;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 @media only screen and (max-width: 767px) {
   .student-card-btn .student-card-box .number {
@@ -4546,11 +4551,11 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 
 .attendances-page .student-card-btn:has(input:checked) .student-card-box {
-  border-color: #0363f6;
-  background-color: rgba(3, 99, 246, 0.1019607843);
+  border-color: rgb(var(--main-color));
+  background-color: rgba(var(--main-color), 0.102);
 }
 .attendances-page .student-card-btn:has(input:checked) .student-name {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .add-groups-parent {
@@ -4567,11 +4572,11 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 .add-groups-btn {
   min-width: 250px;
   box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
-  border: 2px dashed #0363f6;
+  border: 2px dashed rgb(var(--main-color));
   height: 167px;
   flex-direction: column;
   background: transparent;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-size: 24px;
   gap: 20px;
   border-radius: 24px;
@@ -4579,7 +4584,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .add-groups-btn::before {
   content: "+";
-  color: #0363f6;
+  color: rgb(var(--main-color));
   font-size: 36px;
 }
 @media only screen and (max-width: 767px) {
@@ -4650,7 +4655,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   -moz-column-gap: 35px;
        column-gap: 35px;
   row-gap: 5px;
-  background-color: rgba(3, 99, 246, 0.031372549);
+  background-color: rgba(var(--main-color), 0.031);
   border-radius: 15px;
   padding-top: 10px;
   padding-inline: 10px;
@@ -4666,7 +4671,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   font-size: 30px;
   font-weight: 700;
   line-height: 1.6;
-  color: #0363f6;
+  color: rgb(var(--main-color));
   text-align: center;
 }
 .group-card-btn .student-card .student-name {
@@ -4677,24 +4682,24 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 
 .groups-parent .group-card-btn:has(> input:checked) {
-  border-color: #0363f6;
-  background-color: rgba(3, 99, 246, 0.1019607843);
+  border-color: rgb(var(--main-color));
+  background-color: rgba(var(--main-color), 0.102);
 }
 .groups-parent .group-card-btn:has(> input:checked) .student-card {
-  background-color: rgba(3, 99, 246, 0.031372549);
+  background-color: rgba(var(--main-color), 0.031);
 }
 
 .student-cards .student-card:has(input:checked) {
-  background-color: rgba(3, 99, 246, 0.1019607843);
-  border-color: #0363f6;
+  background-color: rgba(var(--main-color), 0.102);
+  border-color: rgb(var(--main-color));
 }
 
 .challenges-history-anchor,
 .wheel-history-anchor {
   padding-inline: 25px;
   min-width: 161px;
-  background-color: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background-color: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
 }
 .challenges-history-anchor::before,
 .wheel-history-anchor::before {
@@ -4702,7 +4707,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .challenges-history-anchor:hover,
 .wheel-history-anchor:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 
@@ -4754,8 +4759,8 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   cursor: pointer;
 }
 .challengesBox-parent .challenge-number-btn:has(input:checked) {
-  border-color: #0363f6;
-  color: #0363f6;
+  border-color: rgb(var(--main-color));
+  color: rgb(var(--main-color));
 }
 .challengesBox-parent .challenge-number-btn:has(input:disabled) {
   opacity: 0.5;
@@ -4766,8 +4771,8 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 .students-wheel-history-page .back-anchor {
   padding-inline: 25px;
   min-width: 79px;
-  background-color: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background-color: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
 }
 .challenges-history-page .back-anchor::before,
 .students-wheel-history-page .back-anchor::before {
@@ -4776,7 +4781,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 .challenges-history-page .back-anchor:hover,
 .students-wheel-history-page .back-anchor:hover {
   color: #fff;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
 }
 
 .wheel-parent {
@@ -4806,7 +4811,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #ffffff;
 }
 @media only screen and (max-width: 767px) {
@@ -4923,7 +4928,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   }
 }
 .countdown-parent .blue-color {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .countdown-parent .timer {
   display: flex;
@@ -4951,7 +4956,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .countdown-parent .arrow i {
   font-size: 24px;
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 @media only screen and (max-width: 767px) {
   .countdown-parent .arrow i {
@@ -5027,14 +5032,14 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   max-width: 414px;
 }
 .addNewRank-parent .reward-input-wrapper .general-anchor {
-  background: rgba(3, 99, 246, 0.1);
-  color: #0363f6;
+  background: rgba(var(--main-color), 0.1);
+  color: rgb(var(--main-color));
   height: 48px;
   border-radius: 24px;
   border: none;
 }
 .addNewRank-parent .reward-input-wrapper .general-anchor:hover {
-  background-color: #0363f6;
+  background-color: rgb(var(--main-color));
   color: #fff;
 }
 .addNewRank-parent .reward-input-wrapper .general-anchor:hover::before {
@@ -5042,7 +5047,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
 }
 .addNewRank-parent .reward-input-wrapper .general-anchor::before {
   content: "+";
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 .setting-btn:after {
@@ -5236,7 +5241,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   transition: all linear 0.2s;
 }
 .footer-item-cont ul li a:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .footer-item-cont ul li a:focus {
   text-decoration: none;
@@ -5257,7 +5262,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   display: flex;
 }
 .footer-social a:hover .icon {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 .footer-social .icon {
   font-size: 14px;
@@ -5297,7 +5302,7 @@ html[dir=rtl] .classes-parent html[dir=ltr] .select2-container .select2-selectio
   transition: all linear 0.2s;
 }
 .copyright .tasawk-text a:hover {
-  color: #0363f6;
+  color: rgb(var(--main-color));
 }
 
 @media only screen and (min-width: 768px) {

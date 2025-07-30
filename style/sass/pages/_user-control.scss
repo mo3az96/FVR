@@ -4,7 +4,7 @@
   //     padding-top: 40px;
   //   }
   .page-title {
-    color: #0363f6;
+    color: $main-color;
     margin-bottom: 20px;
     @include max-992 {
       text-align: center;

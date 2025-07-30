@@ -52,7 +52,7 @@
         gap: 15px;
       }
       i {
-        color: #0363f6;
+        color: $main-color;
         font-size: 26px;
         margin-top: 5px;
         @include max-768 {
@@ -73,7 +73,7 @@
   .call-anchor {
     background-color: rgba($color: #fff, $alpha: 0.1);
     &:hover {
-      background-color: #0363f6;
+      background-color: $main-color;
       color: #fff;
     }
   }

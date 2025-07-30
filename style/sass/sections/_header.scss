@@ -53,7 +53,7 @@
 .myaccount-anchor,
 .form-header .back-anchor {
   min-width: 110px;
-  background-color: rgba($color: $main-color, $alpha: 0.1);
+  background-color: rgba(var(--main-color), 0.1);
   color: $main-color;
   border: none;
   &::before {
@@ -86,7 +86,7 @@
     content: "\f060";
     font-family: "Font Awesome 6 Pro";
     font-weight: 400;
-    color: #0363f6;
+    color: $main-color;
     font-size: 16px;
     transition: all ease-in-out 0.2s;
   }

@@ -21,7 +21,7 @@
     }
   }
   .readmore-anchor {
-    background-color: rgba(3, 100, 247, 0.1);
+    background-color: rgba(var(--main-color), 0.1);
     color: $main-color;
     border: none;
     &:hover {
